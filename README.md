@@ -1,2 +1,1 @@
-# better-jellyfin-ui
-a better user interface for jellyfin.
+still under development. dont use this yet!
