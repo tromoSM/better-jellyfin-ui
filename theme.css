@@ -1,40 +1,155 @@
 .skinHeader-withBackground {
   background-color: #00000054;
-  backdrop-filter: blur(15px);
+  backdrop-filter: blur(50px);
 }
 
 .emby-tabs-slider {
   position: fixed;
   top: 0;
-  width: 100vw;
   left: 50%;
   transform: translateX(-50%);
 }
-.cardOverlayButton-hover::before{
+@keyframes a{
+    from{
+        scale: 0;
+    }
+    to{
+        scale: 1;
+    }
+}
+.dialog{
+background-color: #101010ab;
+backdrop-filter: blur(15px);
+  }
+
+.cardOverlayContainer > .cardOverlayFab-primary{
+            scale: 0;
     backdrop-filter: blur(15px);
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    content: '';
-    scale: 0;
-    border-radius: 50px;
-    transition: 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+    -webkit-backdrop-filter: blur(15px);
+            transition: 0.2s;
+            background-color: rgba(0, 0, 0, 0.29) !important;
+}
+@media (hover: hover) and (pointer: fine) {
+  .paper-icon-button-light:hover:not(:disabled) {
+    background-color: rgba(255, 255, 255, 0.04);
+    color: #fff;
+  }
+}.drawer-open, .mainDrawer {
+  background-color: #101010c9;
+  backdrop-filter: blur(50px);
+}
+.navMenuOption:hover{
+  background: #25252857;
+  transition: none;
+}
+.backgroundContainer{
+background:linear-gradient(0deg,#111 50%,#240000);
+}
+.touch-menu-la.transition{
+transition: transform .24s cubic-bezier(0.075, 0.82, 0.165, 1) ease-out,left .26s cubic-bezier(0.075, 0.82, 0.165, 1) ease-out,-webkit-transform .24s cubic-bezier(0.075, 0.82, 0.165, 1) ease-out;
+}
+.emby-tab-button{
+  font-weight: 453 !important;
+}
+.emby-button-foreground{
+  position: relative;
+  color: white !important;
+}
+
+[is="emby-button"]:hover .emby-button-foreground::before{
+width: 100%;
+}
+.mdl-spinner__layer{
+  border-color: #ffff !important;
+}
+.selectionCommandsPanel {
+  background: #00000030;
+  color: #fff;
+  font-size: 12px;
+  backdrop-filter: blur(50px);
+}
+.itemSelectionPanel {
+  border: 1px solid #353535;
+
+}
+.checkboxOutline {
+  border-color: #ffffff47;
+  border-radius: 50px !important;
+}
+.emby-checkbox:checked + span + .checkboxOutline {
+  background-color: #ffffff36;
+  color: black;
+  backdrop-filter: blur(15px);
+}
+.checkboxIcon {
+  color: #fff;
+  animation: check 0.2s 1 cubic-bezier(0.075, 0.82, 0.165, 1);
+  font-size: 1.6em;
+  will-change: transform;
+}
+@keyframes check {
+  from{
+    transform: scale(0.8);
+  }
+  to{
+    transform: scale(1);
+  }
+}
+.emby-checkbox:checked + span + .checkboxOutline {
+  border-color: #6a6a6a;
+}
+.cardBox:not(.visualCardBox) .cardPadder {
+  background-color: #242424;
+  border-radius: 15px !important;
+}
+.cardContent{
+  border-radius: 15px;
+}
+.emby-button-foreground::before{
+  position: absolute;
+  content: '';
+  left: 50%;
+  transition: 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+  width: 0%;
+  transform: translate(-50%,2px);
+  height: 2px;
+  border-radius: 50px;
+  bottom: 0;
+  background-color: aliceblue;
+}
+.tmla-mask{
+  background: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(2px);
+}
+.cardOverlayContainer > .cardOverlayFab-primary:hover{
+            background-color: rgba(0, 0, 0, 0.459) !important;
+}
+.cardOverlayContainer > .cardOverlayFab-primary:active{
+            background-color: rgba(0, 0, 0, 0.459) !important;
+}
+.cardOverlayContainer:hover  .cardOverlayFab-primary{ 
+          scale: 1;
 }
 [dir="ltr"] .cardOverlayButton-br {
   right: 0;
   gap: 5px;
   bottom: 5px;
 }
+.cardOverlayContainer > .cardOverlayFab-primary:hover {
+  -webkit-transform: scale(1);
+  transform: scale(1);
+  transition: .2s;
+}
+.cardOverlayContainer > .cardOverlayFab-primary {
+  will-change: transform;
+}
 .cardBox:not(.visualCardBox) .cardPadder, .cardContent-shadow {
   box-shadow: 0 .0725em .29em 0 rgba(0, 0, 0, 0.37);
-  border-radius: 15px !important;
 }
 .cardOverlayButton-br{
   padding: 5px !important;
 }
-.cardOverlayContainer:hover .cardOverlayButton-hover::before{ 
- scale: 1;
-}
+
 .card-hoverable:hover .cardOverlayButton-hover {
   opacity: 1;
 }
@@ -49,4 +164,65 @@
 }
 .emby-button-foreground{
     font-family: SF Pro !important;
+}
+html,body{
+    transition: 0.1s;
+    scroll-behavior: smooth;
+}
+.libraryPage {
+  padding-top: 7em !important;
+}
+.detailRibbon {
+  background: linear-gradient(0deg,#101010,transparent);
+}
+.skinHeader.semiTransparent {
+  -webkit-backdrop-filter:blur(15px)  !important;
+  backdrop-filter: blur(15px) !important;
+  background-color: rgba(0,0,0,.4);
+}
+.lazy-image-fadein-fast{
+  margin: 40px 0px;
+}
+.button-flat:hover, .button-link {
+  color: #fff;
+}
+.inputLabelFocused, .selectLabelFocused, .textareaLabelFocused {
+  color: #fff;
+}
+.emby-select-withcolor:focus {
+  border-color: #3c3c3c !important;
+}
+.trackSelections .selectContainer .detailTrackSelect {
+  font-size: inherit;
+  overflow: hidden;
+  padding: 2px 5px;
+  border-radius: 50px;
+}
+.paper-icon-button-light::before{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50px;
+  content: '';
+  transition: 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  left: 50%;
+  opacity: 0;
+  transform: translateX(-50%) scale(0.7);
+  background-color:#2f2f2f !important;
+}
+.paper-icon-button-light:active:not(:disabled) {
+	background-color: rgba(255, 255, 255, 0.2);
+	color: #edfaff;
+}
+.paper-icon-button-light{
+  position: relative;
+}
+.paper-icon-button-light:hover::before{
+  transform: translateX(-50%) scale(1);
+  opacity: 1;
+  
+}
+.cardOverlayContainer {
+  background: #0000001c;
+  border-radius: 15px;
 }
