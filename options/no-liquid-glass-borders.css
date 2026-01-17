@@ -1,0 +1,6 @@
+*,*::backdrop,*::after,.paper-icon-button-light::before,.mdl-slider::-moz-range-thumb {
+  box-shadow: none !important;
+}
+.paper-icon-button-light::before{
+  backdrop-filter: blur(10px);
+}
