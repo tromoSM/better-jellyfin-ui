@@ -2,7 +2,6 @@
   background-color: #00000054;
   backdrop-filter: blur(50px);
 }
-
 .emby-tabs-slider {
   position: fixed;
   top: 0;
@@ -121,7 +120,7 @@ width: 100%;
   position: absolute;
   content: '';
   left: 50%;
-  transition: 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+  transition: 0.2s cubic-bezier(0.075, 0.82, 0.165, 1);
   width: 0%;
   transform: translate(-50%,2px);
   height: 2px;
@@ -302,6 +301,7 @@ filter: brightness(0.9);
 .countIndicator, .fullSyncIndicator, .mediaSourceIndicator, .playedIndicator{
   background: #ffffff21;
   backdrop-filter: blur(10px);
+  box-shadow: 3px 2px 2px -3px rgba(255, 255, 255, 0.39) inset, -2px -2px 2px -2px rgba(255, 255, 255, 0.39) inset, 0px 0px 15px rgba(0, 0, 0, 0.329);
 }
 .card{
   contain: none !important;
@@ -451,3 +451,160 @@ html{
   padding: 7px 10px !important;
   border-radius: 10px !important; 
 }
+
+.playstatebutton-icon-played,.ratingbutton-icon-withrating{
+  color: #ffb0d9;
+}
+[dir="ltr"] .cardOverlayButton-br button span{
+transition: 0.2s;
+}
+[dir="ltr"] .cardOverlayButton-br button:active span{
+  scale: 0.8;
+}
+
+.mediaInfoItem.mediaInfoText.mediaInfoOfficialRating {
+  box-shadow: inset 1px 2px 2px -2px,inset -2px -2px 2px -3px;
+  border-radius: 7px;
+}
+.itemProgressBar {
+  background: #333;
+  background: rgba(51, 51, 51, 0.11);
+  height: .28em;
+  position: relative;
+  backdrop-filter: blur(15px);
+}
+.itemProgressBarForeground {
+  background: #fff;
+}
+[dir="ltr"] .itemProgressBarForeground {
+  left: 0;
+  border-radius: 50px;
+}
+.mdl-slider::-moz-range-thumb {
+  background-color: #fff;
+  backdrop-filter: blur(50px);
+  box-shadow: 3px 2px 2px -3px rgba(102, 102, 102, 0.39) inset, -2px -2px 2px -2px rgba(108, 108, 108, 0.39) inset, 0px 0px 15px rgba(0, 0, 0, 0.329);
+}
+.formDialogFooterItem{
+  border-radius: 50px;
+  box-shadow: 3px 3px 2px -3px rgba(102, 102, 102, 0.39) inset, -2px -3px 2px -2px rgba(108, 108, 108, 0.39) inset, 0px 0px 15px rgba(0, 0, 0, 0.329);
+}
+.formDialogFooterItem:hover{
+  filter: brightness(1.1);
+}
+[tromoSM='css-ap-btn']{
+  display: block;
+  border-radius: 50px;
+  padding: 5px 15px;
+  width: fit-content !important;
+  font-family: SF PRo;
+  font-kerning: normal;
+  right: 0;
+  bottom: 0;
+  font-weight: 400;
+  border: none;
+  outline: none;
+  background: #ffffff17;
+  color: aliceblue;
+  cursor: pointer;
+  backdrop-filter: blur(10px);
+  margin: 10px;
+	box-shadow: 3px 2px 2px -3px rgba(255, 255, 255, 0.39) inset, -2px -2px 2px -2px rgba(255, 255, 255, 0.39) inset, 0px 0px 15px rgba(0, 0, 0, 0.329);
+  position: fixed;
+  z-index: +990;
+}  
+
+*{
+  color-scheme: dark !important; 
+}
+
+.cardOverlayButton.cardOverlayButton-hover.itemAction.paper-icon-button-light.emby-button.ratingbutton-withrating,.cardOverlayButton.cardOverlayButton-hover.itemAction.paper-icon-button-light.emby-button.playstatebutton-played{
+  background: #ffa5f521;
+  box-shadow: 3px 2px 2px -3px rgba(253, 185, 255, 0.39) inset, -2px -2px 2px -2px rgba(255, 158, 244, 0.39) inset, 0px 0px 10px rgba(255, 154, 238, 0.329);
+  backdrop-filter: blur(10px);
+}
+@media (max-width:513px){
+.emby-tabs-slider {
+  position: relative;
+  font-size: 13px !important;
+}
+.emby-tab-button{
+  padding: 5px 7px;
+}
+.skinHeader.focuscontainer-x.skinHeader-withBackground.skinHeader-blurred.headroom.noHomeButtonHeader.headroom--not-top.headroom--not-bottom.headroom--pinned{
+  animation: yoyo 0.5s 1 ;
+}
+.skinHeader.focuscontainer-x.skinHeader-withBackground.skinHeader-blurred.headroom.noHomeButtonHeader.headroom--not-bottom.headroom--not-top.headroom--unpinned{
+  animation: yoyoyo 0.5s 1 forwards cubic-bezier(.46,.03,.52,.96);
+}
+@keyframes yoyo {
+  from{
+    transform: translateY(-100px);
+  }
+  to{
+    transform: translateY(0px);
+  }
+}
+
+@keyframes yoyoyo {
+  from{
+    transform: translateY(0px);
+  }
+  to{
+    transform: translateY(-100px);
+  }}
+}
+.cardOverlayButton-br.flex button span{
+  text-shadow: 0px 0px 10px black;
+}
+.cardOverlayButton.cardOverlayButton-br.itemAction.paper-icon-button-light{
+	backdrop-filter: blur(10px);
+	background: #e6e6e647;
+	margin: 5px;
+}
+.cardOverlayButton.cardOverlayButton-hover.itemAction.paper-icon-button-light.emby-button.ratingbutton-withrating::before,.cardOverlayButton.cardOverlayButton-hover.itemAction.paper-icon-button-light.emby-button.playstatebutton-played::before{
+  animation: yogurt 0.5s 1 forwards;
+  width: 100%;
+  height: 100%;
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  background-color: rgba(255, 169, 184, 0.534);
+}
+@keyframes yogurt{
+  from{
+    scale: 0.4;
+  }
+  to{
+    scale: 1;
+  }
+}
+/*
+NO LIQUID GLASS CORNERS
+*,*::backdrop,*::after,.paper-icon-button-light::before,.mdl-slider::-moz-range-thumb {
+  box-shadow: none !important;
+}
+.paper-icon-button-light::before{
+  backdrop-filter: blur(10px);
+}
+*/
+/*
+HIGH CONTRAST - DISABILITY 
+.cardOverlayContainer > .cardOverlayFab-primary {
+  scale: 0;
+  backdrop-filter: invert(1)!important;
+  -webkit-backdrop-filter: invert(1) !important;
+  transition: 0.2s;
+  
+  background-color: rgba(0, 0, 0, 0.29) !important;
+}
+  .dialog {
+  background-color: #101010ab;
+  backdrop-filter: invert(1) blur(10px) !important;
+}
+  [dir="ltr"] .navMenuOption{
+  background: #f0f8ff38 !important; 
+}
+*/
