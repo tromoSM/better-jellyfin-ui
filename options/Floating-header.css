@@ -1,0 +1,10 @@
+.skinHeader {
+  width: 99%;
+  left: 50%;
+  transform: translateX(-50%);
+  margin: 7px 0px;
+  border-radius: 15px;
+  box-shadow: 2px 2px 2px -3px rgba(255, 255, 255, 0.65) inset, -2px -2px 2px -3px rgba(255, 255, 255, 0.61) inset, 0px 0px 15px rgba(0, 0, 0, 0.329);
+  background: #f0f8ff05;
+  border-radius: 50px;
+}
