@@ -1,0 +1,9 @@
+:root{
+  /*active card indicators*/
+  --card-indicate-bg:rgba(255, 169, 184, 0.534);
+  --card-indicate-liquid-glass:rgba(253, 185, 255, 0.39) ;
+  --card-indicate-shadow:rgba(255, 154, 238, 0.329);
+  --card-indicate-icon-fill:#ffb0d9;
+  /*Backgound*/
+  --background-glow-color:#240000;
+}
