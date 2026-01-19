@@ -215,6 +215,14 @@ html,body{
   padding: 2px 5px;
   border-radius: 50px;
 }
+select{
+  background: #292929;
+  border: none;
+  transition: 0.2s;
+  outline: none;
+}
+select:hover{background-color: #353535;}
+select:focus{background-color: #3a3a3a;}
 .paper-icon-button-light::before{
   position: absolute;
   width: 100%;
@@ -574,7 +582,78 @@ transition: 0.2s;
   padding: 3px 10px;
   box-shadow: 3px 2px 2px -3px rgba(255, 255, 255, 0.39) inset, -2px -2px 2px -2px rgba(255, 255, 255, 0.39) inset, 0px 0px 15px rgba(0, 0, 0, 0.329);
 }
-
+.detailsGroupItem.writersGroup {
+  padding: 0;
+  margin: 0 !important;
+}
+.sectionTitle {
+  font-size: 26px;
+  padding: 0px;
+  margin: 10px 0px;
+  font-weight: 440;
+}
+#btnAddImage {
+  background: #f0f8ff29;
+  color: aliceblue;
+  border-radius: 50px;
+  padding: 7px 15px;
+  box-shadow: 2px 2px 2px -3px rgba(255, 255, 255, 0.65) inset, -2px -2px 2px -3px rgba(255, 255, 255, 0.61) inset, 0px 0px 15px rgba(0, 0, 0, 0.329);
+}
+#btnAddImage:hover {
+  background: #f0f8ff40;
+  box-shadow: 1px 2px 2px -1.7px rgba(255, 255, 255, 0.65) inset, -1px -2px 2px -2px rgb(255, 255, 255) inset, 0px 0px 15px rgba(0, 0, 0, 0.329);
+}
+.sliderBubble::before {
+	width: 100%;
+	position: absolute;
+	height: 100%;
+	border-radius: 50px;
+	background: #f000;
+	content: '';
+	z-index: -1;
+	backdrop-filter: blur(15px);
+}
+.iconOsdProgressInner {
+  background: #ffffff85;
+  border-radius: .25em;
+  height: 100%;
+}
+.iconOsd-hidden {
+  opacity: 0;
+  scale: 0.95;
+}
+.iconOsd{
+  background-color: rgba(255, 248, 248, 0.04);
+  box-shadow: 2px 2px 2px -3px rgba(255, 255, 255, 0.65) inset, -2px -2px 2px -3px rgba(255, 255, 255, 0.61) inset, 0px 0px 15px rgba(0, 0, 0, 0.329);
+  border-radius: 15px;
+  scale: 1;
+  transition: 0.2s;
+}
+.videoOsdBottom {
+  width: 98%;
+  backdrop-filter: blur(15px);
+  left: 50%;
+  transform:translateX(-50%) translateY(0px);
+  border-radius: 15px;
+  background: #ffffff0a;
+  height: fit-content;
+  padding: 6px;
+  margin: 10px 0px;
+  transition: 0.3s;
+  animation: slide-up-centered 0.5s 1 ;
+}
+@keyframes  slide-up-centered{
+  from{
+  transform: translateX(-50%) translateY(50px);
+  }
+  to{
+  transform: translateX(-50%) translateY(0px);
+  }
+}
+.videoOsdBottom-hidden {
+  opacity: 0;
+  transform: translateX(-50%) translateY(50px) !important;
+}
 /*Mobile styling ahh begin*/
 .cardOverlayButton.cardOverlayButton-hover.itemAction.paper-icon-button-light.emby-button.ratingbutton-withrating,.cardOverlayButton.cardOverlayButton-hover.itemAction.paper-icon-button-light.emby-button.playstatebutton-played{
   background: #ffa5f521;
@@ -714,7 +793,305 @@ transition: 0.2s;
     background-size: 110%;
   }
 }
+@keyframes slide-up{
+  from{
+    transform: translateY(20px);
+  }
+  25%{transform:translateY(-20px);}
+  50%{transform: translateY(0px);}
+  75%{transform: translateY(-5px);}
+  to{
+    transform: translateY(0px);
+  }
+}
+.toast.toastVisible {
+	box-shadow: 3px 2px 2px -3px rgba(255, 255, 255, 0.65) inset, -2px -2px 2px -3px rgba(255, 255, 255, 0.61) inset, 0px 0px 15px rgba(0, 0, 0, 0.329);
+	background: transparent;
+	border-radius: 35px;
+  animation: slide-up 1s 1 forwards;
+	backdrop-filter: blur(10px);
+}
+/*start server ui*/
+.MuiButtonBase-root.MuiListItemButton-root.MuiListItemButton-gutters.Mui-selected.css-1mycxcp {
+  overflow: hidden;
+}
+.css-au9l87 {
+  background: white;
+  color: black;
+  border-radius: 50px;
+  outline: none;
+}
+.css-jqp64h {
+  border-radius: 50px;
+  color: white;
+  transition: none;
+  border: 1px solid;
+}
+.css-jqp64h:hover {
+  background: white;
+  color: black;
+  border: none;
+}
+.css-1amat89,.css-lh4h8w,.css-1yd4q9n,.css-1m91j26,.css-11qg7pw,#btnAddUser,.cardBox.visualCardBox,.css-nqwc7a{
+  border-radius: 14px;
+  background: #f0f8ff12;
+  box-shadow: 2px 2px 2px -3px rgba(255, 255, 255, 0.65) inset, -2px -2px 2px -3px rgba(255, 255, 255, 0.61) inset, 0px 0px 15px rgba(0, 0, 0, 0.329);
+}
+.css-mk0p0t:hover{
+  box-shadow: 2px 2px 2px -3px rgba(255, 255, 255, 0.65) inset, -2px -2px 2px -3px rgba(255, 255, 255, 0.61) inset, 0px 0px 15px rgba(0, 0, 0, 0.329);
+  background: #f0f8ff1c;
+}
+.MuiPaper-root.MuiPaper-elevation.MuiPaper-elevation4.MuiAppBar-root.MuiAppBar-colorDefault.MuiAppBar-positionFixed.mui-fixed.css-jz1vtw {
+  background: #867e7e33;
+  backdrop-filter: blur(15px);
+}
+.css-yknuxp.Mui-selected {
+  background-color: rgba(0, 0, 0, 0.29);
+}
+.css-yknuxp.Mui-selected:hover {
+  background-color: rgba(0, 0, 0, 0.38);
+}
+.css-yknuxp {
+  position: relative;
+  overflow: hidden;
+  border-radius: 50px;
+  width: 99%;
+  margin: 2px 5px;
+}
+.css-yknuxp:hover {
+  text-decoration: none;
+  background-color: rgba(255, 255, 255, 0.05);
+  transition: none;
+}
+.css-1787okl {
+  background: #f0f8ff0d;
+  border-radius: 15px;
+  box-shadow: 2px 2px 2px -3px rgba(255, 255, 255, 0.65) inset, -2px -2px 2px -3px rgba(255, 255, 255, 0.61) inset, 0px 0px 15px rgba(0, 0, 0, 0.329);
+}
+#btnAddUser{border-radius: 50px !important;}
+.css-t0qa2a,.css-1v7qedu{
+  background: #f0f8ff12;
+  border-radius: 10px;
+  box-shadow: 2px 2px 2px -3px rgba(255, 255, 255, 0.65) inset, -2px -2px 2px -3px rgba(255, 255, 255, 0.61) inset, 0px 0px 15px rgba(0, 0, 0, 0.329);
+  color: aliceblue;
+}
+.css-t0qa2a:hover,.css-1v7qedu:hover{
+  background: #ffffff30;
 
+}
+.css-1x1rezd{
+  border-radius: 50px;
+}
+.css-1x1rezd:hover {
+  border-radius: 50px;
+  box-shadow: 2px 2px 2px -3px rgba(255, 255, 255, 0.65) inset, -2px -2px 2px -3px rgba(255, 255, 255, 0.61) inset, 0px 0px 15px rgba(0, 0, 0, 0.329);
+}
+.css-1w52bhu {
+  border-radius: 10px;
+  background: #ff66663d;
+}
+.css-1w52bhu {
+  border-radius: 10px;
+  background: #ff66663d;
+  box-shadow: 2px 2px 2px -3px rgba(255, 255, 255, 0.65) inset, -2px -2px 2px -3px rgba(255, 255, 255, 0.61) inset, 0px 0px 15px rgba(0, 0, 0, 0.329);
+}
+.css-16up0we {
+  border-radius: 50px;
+}
+.css-l1co2t,.css-g193a2,.css-46ocr5,.css-19qxu2,.css-1y99tin{
+  background: #ffffff1a;
+  border-radius: 15px;
+  box-shadow: 2px 2px 2px -3px rgba(255, 255, 255, 0.65) inset, -2px -2px 2px -3px rgba(255, 255, 255, 0.61) inset, 0px 0px 15px rgba(0, 0, 0, 0.329);
+  overflow: hidden;
+}
+.css-l1co2t::before,.css-g193a2::before,.css-46ocr5::before,.css-19qxu2::before,.css-1y99tin::before{
+  border-bottom: 1px solid rgba(255, 255, 255, 0.11);
+}
+.css-l1co2t:hover:not(.Mui-disabled, .Mui-error)::before,.css-g193a2:hover:not(.Mui-disabled,.Mui-error)::before,.css-46ocr5:hover:not(.Mui-disabled,.Mui-error)::before,.css-19qxu2:hover:not(.Mui-disabled,.Mui-error)::before,.css-1y99tin:hover:not(.Mui-disabled,.Mui-error)::before {
+  border-bottom: 1px solid #ffffff1f;
+}
+.css-5191sg.Mui-focused,.css-g193a2.Mui-focused,.css-46ocr5.Mui-focused,.css-19qxu2.Mui-focused,.css-1y99tin.Mui-focused{
+  color: #fff;
+}
+.css-l1co2t::after{
+  border-bottom: 2px solid rgba(255, 255, 255, 0.25);
+}
+.css-c4z1po {
+  margin: 0px;
+  color: rgb(255, 255, 255);
+  text-decoration-line: underline;
+  text-decoration-color: rgb(255, 255, 255);
+}
+.css-1a194ku.Mui-checked, .css-1a194ku.MuiCheckbox-indeterminate {
+  color: rgb(255, 255, 255);
+}
+.css-1a194ku:hover {
+  background-color: rgba(255, 255, 255, 0.04);
+  box-shadow: 2px 2px 2px -3px rgba(255, 255, 255, 0.65) inset, -2px -2px 2px -3px rgba(255, 255, 255, 0.61) inset, 0px 0px 15px rgba(0, 0, 0, 0.329);
+}
+.css-1a194ku{
+  margin-right: 10px;
+}
+.css-ybuz3k {
+  background: #ffffff2e;
+  border-radius: 50px;
+  box-shadow: 2px 2px 2px -3px rgba(255, 255, 255, 0.65) inset, -2px -2px 2px -3px rgba(255, 255, 255, 0.61) inset, 0px 0px 15px rgba(0, 0, 0, 0.329) !important;
+  color: aliceblue;
+  overflow: hidden;
+}
+.css-mbeig7 {
+  overflow: hidden;
+}
+.css-mbeig7.Mui-selected {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+.css-mbeig7.Mui-selected:hover {
+  background-color: rgba(255, 255, 255, 0.16);
+}
+.css-18bruhv {
+  border-radius: 15px;
+  box-shadow: 2px 2px 2px -3px rgba(255, 255, 255, 0.65) inset, -2px -2px 2px -3px rgba(255, 255, 255, 0.61) inset, 0px 0px 15px rgba(0, 0, 0, 0.329);
+  overflow: scroll;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+  background: transparent;
+  backdrop-filter: blur(50px);
+}
+.css-1fmeo47.Mui-checked {
+  color: rgb(255, 255, 255);
+}
+.css-1fmeo47.Mui-checked + .MuiSwitch-track, .css-7m1v5o {
+  background-color: rgba(255, 255, 255, 0.13) !important;
+  box-shadow: rgba(255, 255, 255, 0.65) 2px 2px 2px -3px inset, rgba(255, 255, 255, 0.61) -2px -2px 2px -3px inset, rgba(0, 0, 0, 0.33) 0px 0px 15px;
+}
+.css-1fmeo47.Mui-checked:hover {
+  background-color: rgba(255, 255, 255, 0);
+}
+
+@media (min-width: 600px) {
+  .css-1mkya9s > :not(style) ~ :not(style) {
+    margin-top: calc(2 * var(--jf-spacing));
+  }
+}
+@media (min-width: 600px) {
+  .css-1mkya9s > :not(style):not(style) {
+    margin: 0px;
+    margin-top: 0px;
+
+  }
+}
+@media (min-width: 0px) {
+  .css-1mkya9s > :not(style) ~ :not(style) {
+    margin-top: calc(3 * var(--jf-spacing));
+  }
+}
+@media (min-width: 0px) {
+  .css-1mkya9s > :not(style):not(style) {
+    margin: 0px;
+  }
+}
+.css-nu23t2 {
+  border-radius: 50px;
+
+  color: white;
+  border-color: transparent;
+
+  box-shadow: 2px 2px 2px -3px rgba(255, 255, 255, 0.65) inset, -2px -2px 2px -3px rgba(255, 255, 255, 0.61) inset, 0px 0px 15px rgba(0, 0, 0, 0.329);
+}
+.css-1vcmsp6,.css-o2nokc{
+	border-radius: 50px;
+	border-color: transparent;
+	box-shadow: 1px 2px 2px -3px rgba(255, 94, 94, 0.65) inset, -2px -2px 2px -3px rgba(255, 63, 63, 0.61) inset, 0px 0px 15px rgba(0, 0, 0, 0.329);
+	background: #ff353508;
+}
+.css-o2nokc:hover{
+	background: #ff353513;
+}
+@media (hover: hover) {
+  .css-nu23t2:hover {
+    --variant-containedBg: rgb(250, 254, 255);
+    --variant-textBg: rgba(var(--jf-palette-primary-mainChannel) / var(--jf-palette-action-hoverOpacity));
+    --variant-outlinedBorder: #fff;
+    --variant-outlinedBg: rgba(255, 255, 255, 0.08);
+  }
+}
+.css-1mycxcp{
+overflow: hidden !important;
+margin:2px 20px;
+border-radius: 50px;
+}
+.css-1mycxcp.Mui-selected {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+.css-1mycxcp.Mui-selected:hover {
+  background-color: rgba(255, 255, 255, 0.18);
+}
+.css-mq8hip,.css-j5zxs1{
+ background-color: rgba(255, 255, 255, 0.08);  
+}
+.css-9yhqgk,.css-1ypqulw,.css-16byup5{
+  border-radius: 50px;
+  background: #ffffff1c;
+  box-shadow: 2px 2px 2px -3px rgba(255, 255, 255, 0.65) inset, -2px -2px 2px -3px rgba(255, 255, 255, 0.61) inset, 0px 0px 15px rgba(0, 0, 0, 0.329);
+}
+.css-1y7eeso {
+  background: #ffffff17;
+  color: aliceblue;
+  box-shadow: 2px 2px 2px -3px rgba(255, 255, 255, 0.65) inset, -2px -2px 2px -3px rgba(255, 255, 255, 0.61) inset, 0px 0px 15px rgba(0, 0, 0, 0);
+}
+.css-rvwa8l{
+background: rgba(253, 253, 253, 0);
+  border-color: transparent;
+  box-shadow: rgba(255, 255, 255, 0.65) 2px 2px 2px -3px inset, rgba(255, 255, 255, 0.61) -2px -2px 2px -3px inset, rgba(0, 0, 0, 0.33) 0px 0px 15px;
+  border-radius: 10px;
+  color: white;
+}
+.css-1pnkec2 {
+  box-shadow: 2px 2px 2px -3px rgba(255, 255, 255, 0.65) inset, -2px -2px 2px -3px rgba(255, 255, 255, 0.61) inset, 0px 0px 15px rgba(0, 0, 0, 0.329);
+  background: #f0f8ff0f;
+  border-radius: 50px;
+}
+.css-1pnkec2:hover {
+  background-color: rgba(255, 255, 255, 0.12);
+}
+.css-1ejoxfo {
+  background: #ffffff4d;
+  box-shadow: 2px 2px 2px -3px rgba(255, 255, 255, 0.65) inset, -2px -2px 2px -3px rgba(255, 255, 255, 0.61) inset, 0px 0px 15px rgba(0, 0, 0, 0.329);
+  color: aliceblue;
+}
+.css-1ejoxfo:hover, .css-1ejoxfo.Mui-focusVisible {
+  background-color: rgba(255, 255, 255, 0.39);
+}
+.css-cr7oyo{
+  background: #ffffff0f;
+  border-color: transparent;
+  border-radius: 50px;
+  box-shadow: 2px 2px 2px -3px rgba(255, 255, 255, 0.65) inset, -2px -2px 2px -3px rgba(255, 255, 255, 0.61) inset, 0px 0px 15px rgba(0, 0, 0, 0.329);
+  color: aliceblue;
+}
+.css-b3kvr0 {
+  border-radius: 50px;
+  box-shadow: 2px 2px 2px -3px rgba(255, 255, 255, 0.65) inset, -2px -2px 2px -3px rgba(255, 255, 255, 0.61) inset, 0px 0px 15px rgba(0, 0, 0, 0.329);
+  background: #ffffff12;
+  transition: 0.2s;
+}
+.css-b3kvr0:hover {
+  background-color: rgba(255, 255, 255, 0.14);
+}
+.verticalSection-extrabottompadding{
+  border-radius: 15px;
+}
+@media (min-width: 50em) {
+  .readOnlyContent, form {
+    max-width: 99%;
+  }
+}
+.css-wprkhu .MuiDrawer-paper {
+  padding-bottom: 4.2rem;
+  box-sizing: border-box;
+  scrollbar-width: thin;
+  scrollbar-color: #444 #202020;
+}
 /*
 
 /*
@@ -775,4 +1152,17 @@ transition: 0.2s;
   --background-glow-color:#240000;
 }
 =========================================================================================================================
+5.FLOATING HEADER
+=========================================================================================================================
+.skinHeader {
+  width: 99%;
+  left: 50%;
+  transform: translateX(-50%);
+  margin: 7px 0px;
+  border-radius: 15px;
+  box-shadow: 2px 2px 2px -3px rgba(255, 255, 255, 0.65) inset, -2px -2px 2px -3px rgba(255, 255, 255, 0.61) inset, 0px 0px 15px rgba(0, 0, 0, 0.329);
+  background: #f0f8ff05;
+  border-radius: 50px;
+}
+===========================================================================================================================
 */
