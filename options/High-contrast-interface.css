@@ -1,0 +1,15 @@
+.cardOverlayContainer > .cardOverlayFab-primary {
+  scale: 0;
+  backdrop-filter: invert(1)!important;
+  -webkit-backdrop-filter: invert(1) !important;
+  transition: 0.2s;
+  
+  background-color: rgba(0, 0, 0, 0.29) !important;
+}
+  .dialog {
+  background-color: #101010ab;
+  backdrop-filter: invert(1) blur(10px) !important;
+}
+  [dir="ltr"] .navMenuOption{
+  background: #f0f8ff38 !important; 
+}
