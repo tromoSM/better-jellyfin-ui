@@ -1,0 +1,15 @@
+.card.overflowBackdropCard.card-hoverable.card-withuserdata:hover .cardImageContainer.coveredImage.cardContent.itemAction.lazy.blurhashed.lazy-image-fadein-fast {
+  transition: 0.3s;
+  will-change: background-size;
+  animation: bg-scale 0.2s 1 forwards !important;
+  width: 100%;
+  overflow: hidden !important;
+}
+@keyframes fade-in {
+  from{
+    opacity: 1;
+  }
+  to{
+    opacity: 1;
+  }
+}
