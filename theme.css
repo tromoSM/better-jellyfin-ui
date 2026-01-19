@@ -1,3 +1,12 @@
+:root{
+  /*active card indicators*/
+  --card-indicate-bg:rgba(255, 169, 184, 0.534);
+  --card-indicate-liquid-glass:rgba(253, 185, 255, 0.39) ;
+  --card-indicate-shadow:rgba(255, 154, 238, 0.329);
+  --card-indicate-icon-fill:#ffb0d9;
+  /*Backgound*/
+  --background-glow-color:#240000;
+}
 .skinHeader-withBackground {
   background-color: #00000054;
   backdrop-filter: blur(50px);
@@ -39,10 +48,10 @@ backdrop-filter: blur(15px);
 }
 .navMenuOption:hover{
   background: #00000057;
-  transition: none;
+  transition:0.1s;
 }
 .backgroundContainer{
-background:linear-gradient(0deg,#111 50%,#240000);
+background:linear-gradient(0deg,#111 50%,var(--background-glow-color));
 }
 .touch-menu-la.transition{
 transition: transform .24s cubic-bezier(0.075, 0.82, 0.165, 1) ease-out,left .26s cubic-bezier(0.075, 0.82, 0.165, 1) ease-out,-webkit-transform .24s cubic-bezier(0.075, 0.82, 0.165, 1) ease-out;
@@ -453,7 +462,7 @@ html{
 }
 
 .playstatebutton-icon-played,.ratingbutton-icon-withrating{
-  color: #ffb0d9;
+  color: var(--card-indicate-icon-fill);
 }
 [dir="ltr"] .cardOverlayButton-br button span{
 transition: 0.2s;
@@ -517,10 +526,59 @@ transition: 0.2s;
 *{
   color-scheme: dark !important; 
 }
+.itemDetailsGroup {
+	background: #ffffff0a;
+	word-break: keep-all;
+	padding: 15px 30px;
+	border-radius: 20px;
+	box-shadow: 3px 2px 2px -3px rgba(255, 255, 255, 0.39) inset, -2px -2px 2px -2px rgba(255, 255, 255, 0.39) inset, 0px 0px 15px rgba(0, 0, 0, 0.329);
+}
+#embyselect3 {
+  border: none;
+  background: #222;
+}
+.listItem.listItem-largeImage.listItem-withContentWrapper {
+  margin-top: 10px;
+}
+.listItem.listItem-largeImage.listItem-withContentWrapper:hover {
+  scale: 1.001;
+}
+.listItem.listItem-largeImage.listItem-withContentWrapper {
+  transition: 0.3s cubic-bezier(.23,1,.32,1);
+}
+.listItemImageButton.itemAction.paper-icon-button-light {
+  backdrop-filter: blur(2px);
+  background: #ffffff17;
+  scale: 0.7;
+  box-shadow: 3px 2px 2px -3px rgba(255, 255, 255, 0.39) inset, -2px -2px 2px -2px rgba(255, 255, 255, 0.39) inset, 0px 0px 15px rgba(0, 0, 0, 0.329);
+}
+.listItemImageButton.itemAction.paper-icon-button-light:hover{
+  backdrop-filter: blur(5px);
+}
+.listItemButton.paper-icon-button-light.emby-button::before {
+  opacity: 0;
+}
+.listItemButton.itemAction.paper-icon-button-light::before {
+  opacity: 0;
+}
+.listItemButton.itemAction.paper-icon-button-light:hover,.listItemButton.paper-icon-button-light.emby-button:hover{
+  box-shadow: 3px 2px 2px -3px rgba(255, 255, 255, 0.39) inset, -2px -2px 2px -2px rgba(255, 255, 255, 0.39) inset, 0px 0px 15px rgba(0, 0, 0, 0.329);
+}
+.detailsGroupItem.studiosGroup {
+  padding: 0;
+  margin: 0 !important;
+}
+.listPaging {
+  background: #f0f8ff0f;
+  border-radius: 50px;
+  padding: 3px 10px;
+  box-shadow: 3px 2px 2px -3px rgba(255, 255, 255, 0.39) inset, -2px -2px 2px -2px rgba(255, 255, 255, 0.39) inset, 0px 0px 15px rgba(0, 0, 0, 0.329);
+}
 
+/*Mobile styling ahh begin*/
 .cardOverlayButton.cardOverlayButton-hover.itemAction.paper-icon-button-light.emby-button.ratingbutton-withrating,.cardOverlayButton.cardOverlayButton-hover.itemAction.paper-icon-button-light.emby-button.playstatebutton-played{
   background: #ffa5f521;
-  box-shadow: 3px 2px 2px -3px rgba(253, 185, 255, 0.39) inset, -2px -2px 2px -2px rgba(255, 158, 244, 0.39) inset, 0px 0px 10px rgba(255, 154, 238, 0.329);
+  box-shadow: 3px 2px 2px -3px var(--card-indicate-liquid-glass) inset, -2px -2px 2px -2px var(--card-indicate-liquid-glass)  inset, 0px 0px 10px var(--card-indicate-shadow);
   backdrop-filter: blur(10px);
 }
 @media (max-width:513px){
@@ -562,6 +620,8 @@ transition: 0.2s;
 	background: #e6e6e647;
 	margin: 5px;
 }
+/*mobile style end*/
+/*ani*/
 .cardOverlayButton.cardOverlayButton-hover.itemAction.paper-icon-button-light.emby-button.ratingbutton-withrating::before,.cardOverlayButton.cardOverlayButton-hover.itemAction.paper-icon-button-light.emby-button.playstatebutton-played::before{
   animation: yogurt 0.5s 1 forwards;
   width: 100%;
@@ -571,7 +631,7 @@ transition: 0.2s;
   left: 50%;
   top: 50%;
   transform: translateX(-50%) translateY(-50%);
-  background-color: rgba(255, 169, 184, 0.534);
+  background-color: var(--card-indicate-bg);
 }
 @keyframes yogurt{
   from{
@@ -581,17 +641,96 @@ transition: 0.2s;
     scale: 1;
   }
 }
+.emby-scrollbuttons.padded-right{
+  animation: liquid-glass-ani-scale-invert 1s 1;
+}
+@keyframes liquid-glass-ani-scale-invert{
+  from{
+    scale: 1.1;
+  }
+  25%{
+    scale: 0.9;
+  }
+  50%{
+    scale: 1.05;
+  }
+  to{
+    scale: 1;
+  }
+}
+@keyframes opacity-scale{
+  from{
+    opacity: 0;
+    filter: blur(5px);
+    scale: 0.8;
+  }
+  to{
+    filter: none;
+    opacity: 1;
+    scale: 1;
+  }
+}
+@keyframes x-scale{
+  from{
+    transform: scaleX(1);
+  }
+  50%{
+    transform: scaleX(1.05);
+  }
+  to{
+    transform: scaleX(1);
+  }
+}
+.lnkMediaFolder.navMenuOption.emby-button:hover{
+  animation:x-scale 0.4s 1 forwards cubic-bezier(.23,1,.32,1);
+}
+.card.overflowBackdropCard.card-hoverable.card-withuserdata{
+  animation: opacity-scale 0.5s 1 100ms forwards;
+  scale: 0.8;
+  opacity: 0;
+}
+
+.card.overflowBackdropCard.card-hoverable.card-withuserdata:nth-child(2){animation-delay: 200ms !important;}
+.card.overflowBackdropCard.card-hoverable.card-withuserdata:nth-child(3){animation-delay: 300ms !important;}
+.card.overflowBackdropCard.card-hoverable.card-withuserdata:nth-child(4){animation-delay: 400ms !important;}
+.card.overflowBackdropCard.card-hoverable.card-withuserdata:nth-child(5){animation-delay: 500ms !important;}
+.card.overflowBackdropCard.card-hoverable.card-withuserdata:nth-child(6){animation-delay: 600ms !important;}
+.card.overflowBackdropCard.card-hoverable.card-withuserdata:nth-child(7){animation-delay: 700ms !important;}
+.button-flat.button-flat-mini.sectionTitleTextButton.emby-button span{
+  transition: 0.2s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+.button-flat.button-flat-mini.sectionTitleTextButton.emby-button:hover span {
+  transform: translateX(5px);
+}
+
+.emby-scrollbuttons.padded-right:hover {
+  box-shadow: 3px 2px 2px -3px rgba(255, 255, 255, 0.65) inset, -2px -2px 2px -3px rgba(255, 255, 255, 0.61) inset, 0px 0px 15px rgba(0, 0, 0, 0.329);
+}
+@keyframes bg-scale{
+  from{
+    background-size: 100%;
+  }
+  to{
+    background-size: 110%;
+  }
+}
+
 /*
-NO LIQUID GLASS CORNERS
+
+/*
+ OPTIONS - PLUGINS/PREFERENCES
+===================
+1.NO LIQUID GLASS CORNERS
+==============================================================================================================
 *,*::backdrop,*::after,.paper-icon-button-light::before,.mdl-slider::-moz-range-thumb {
   box-shadow: none !important;
 }
 .paper-icon-button-light::before{
   backdrop-filter: blur(10px);
 }
-*/
-/*
-HIGH CONTRAST - DISABILITY 
+================================================================================================================
+2.HIGH CONTRAST - DISABILITY 
+==================================================================================================================
 .cardOverlayContainer > .cardOverlayFab-primary {
   scale: 0;
   backdrop-filter: invert(1)!important;
@@ -607,4 +746,33 @@ HIGH CONTRAST - DISABILITY
   [dir="ltr"] .navMenuOption{
   background: #f0f8ff38 !important; 
 }
+===================================================================================================================
+3. SCALE UP EFFECT ON MOVIE CARD WHEN HOVER (bug ani-fade-in-com)
+===================================================================================================================
+.card.overflowBackdropCard.card-hoverable.card-withuserdata:hover .cardImageContainer.coveredImage.cardContent.itemAction.lazy.blurhashed.lazy-image-fadein-fast {
+  transition: 0.3s;
+  will-change: background-size;
+  animation: bg-scale 0.2s 1 forwards !important;
+  width: 100%;
+  overflow: hidden !important;
+}
+@keyframes fade-in {
+  from{
+    opacity: 1;
+  }
+  to{
+    opacity: 1;
+  }
+}
+=========================================================================================================================
+4. CHANGE COLOR PREFERENCE
+=========================================================================================================================
+:root{
+  --card-indicate-bg:rgba(255, 169, 184, 0.534);
+  --card-indicate-liquid-glass:rgba(253, 185, 255, 0.39) ;
+  --card-indicate-shadow:rgba(255, 154, 238, 0.329);
+  --card-indicate-icon-fill:#ffb0d9;
+  --background-glow-color:#240000;
+}
+=========================================================================================================================
 */
