@@ -1092,6 +1092,86 @@ background: rgba(253, 253, 253, 0);
   scrollbar-width: thin;
   scrollbar-color: #444 #202020;
 }
+.css-fh2ueb,.css-1qq8wmv,.css-g99rn3,.MuiStack-root.css-11r6nok button,.css-1x1rezd{
+  overflow: hidden;
+}
+.css-134quyw {
+  border-radius: 15px;
+  box-shadow: 2px 2px 2px -3px rgba(181, 144, 0, 0.65) inset, -2px -2px 2px -3px rgba(236, 173, 128, 0.61) inset, 0px 0px 15px rgba(0, 0, 0, 0.329);
+}
+.css-hkers1 {
+  background: #ffffff0d;
+  box-shadow: 2px 2px 2px -3px rgba(255, 255, 255, 0.65) inset, -2px -2px 2px -3px rgba(255, 255, 255, 0.61) inset, 0px 0px 15px rgba(0, 0, 0, 0.329);
+  border-radius: 15px;
+}
+.css-17t2m54,.css-eqdfa1{
+  border-bottom: 1px solid rgba(81, 81, 81, 0.25);
+}
+.css-wdb3n7 {
+	backdrop-filter: blur(15px);
+	border-radius: 8px;
+	box-shadow: 2px 2px 2px -3px rgba(255, 255, 255, 0.65) inset, -2px -2px 2px -3px rgba(255, 255, 255, 0.61) inset, 0px 0px 15px rgba(0, 0, 0, 0.329);
+	background: rgba(255, 255, 255, 0.096);
+}
+.css-1t8x5q4 {
+  background: #ffffff0f;
+  border-radius: 25px;
+  backdrop-filter: blur(20px);
+  box-shadow: 2px 2px 2px -3px rgba(255, 255, 255, 0.65) inset, -2px -2px 2px -3px rgba(255, 255, 255, 0.61) inset, 0px 0px 15px rgba(0, 0, 0, 0.329);
+}
+.css-8mwzdy {
+  border-top: 0.5px solid #f0f8ff14;
+}
+.css-8mwzdy {
+  border-top: 0.5px solid #f0f8ff14;
+  display: flex;
+  gap: 5px;
+  justify-content: center;
+  align-content: center;
+}
+.MuiButtonBase-root.MuiButton-root.MuiButton-text.MuiButton-textPrimary.MuiButton-sizeMedium.MuiButton-textSizeMedium.MuiButton-colorPrimary.css-19rbmc7,
+.MuiButtonBase-root.MuiButton-root.MuiButton-contained.MuiButton-containedError.MuiButton-sizeMedium.MuiButton-containedSizeMedium.MuiButton-colorError.css-o2nokc {
+	width: 50%;
+	margin: 0;
+	color: white;
+	border-radius: 50px;
+  overflow: hidden;
+}
+.MuiButtonBase-root.MuiButton-root.MuiButton-contained.MuiButton-containedError.MuiButton-sizeMedium.MuiButton-containedSizeMedium.MuiButton-colorError.css-o2nokc {
+  box-shadow: 2px 2px 2px -3px rgba(255, 103, 103, 0.65) inset, -2px -2px 2px -3px rgba(255, 85, 85, 0.61) inset, 0px 0px 15px rgba(21, 21, 21, 0.33);
+}
+.MuiButtonBase-root.MuiButton-root.MuiButton-text.MuiButton-textPrimary.MuiButton-sizeMedium.MuiButton-textSizeMedium.MuiButton-colorPrimary.css-19rbmc7:hover {
+  background: #f0f8ff0a;
+  box-shadow: 2px 2px 2px -3px rgba(255, 255, 255, 0.65) inset, -2px -2px 2px -3px rgba(255, 255, 255, 0.61) inset, 0px 0px 15px rgba(0, 0, 0, 0);
+}
+.MuiButtonBase-root.MuiButton-root.MuiButton-text.MuiButton-textPrimary.MuiButton-sizeMedium.MuiButton-textSizeMedium.MuiButton-colorPrimary.css-19rbmc7 {
+  box-shadow: 2px 2px 2px -3px rgba(255, 255, 255, 0) inset, -2px -2px 2px -3px rgba(255, 255, 255, 0) inset, 0px 0px 15px rgba(0, 0, 0, 0);
+}
+.css-46ocr5::after {
+  border-bottom: 2px solid #ffffff2e;
+}
+.css-yknuxp:first-child{
+  border-radius: 0px;
+  margin: 0;
+}
+.css-7h500o {
+  background: #ff8a8a1c;
+  border-radius: 20px;
+  box-shadow: 2px 2px 2px -3px rgba(255, 255, 255, 0.65) inset, -2px -2px 2px -3px rgba(255, 255, 255, 0.61) inset, 0px 0px 15px rgba(0, 0, 0, 0);
+}
+.css-wiriro {
+  border-radius: 15px;
+  border: #ffffff21 solid 0.1px;
+}
+.css-wiriro::before {
+  width: 100%;
+  height: 30px;
+  background: linear-gradient(#2e1a1a 50%,transparent);
+  content: '';
+  position: absolute;
+  border-radius: 15px;
+
+}
 /*
 
 /*
