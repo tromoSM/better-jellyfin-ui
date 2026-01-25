@@ -10,6 +10,7 @@
 .skinHeader-withBackground {
   background-color: #00000054;
   backdrop-filter: blur(50px);
+  -webkit-backdrop-filter: blur(50px);
 }
 .emby-tabs-slider {
   position: fixed;
@@ -28,6 +29,7 @@
 .dialog{
 background-color: #101010ab;
 backdrop-filter: blur(15px);
+-webkit-backdrop-filter: blur(15px);
   }
 
 .cardOverlayContainer > .cardOverlayFab-primary{
@@ -45,6 +47,7 @@ backdrop-filter: blur(15px);
 }.drawer-open, .mainDrawer {
   background-color: #10101057;
   backdrop-filter: blur(50px);
+  -webkit-backdrop-filter: blur(50px);
 }
 .navMenuOption:hover{
   background: #00000057;
@@ -77,6 +80,7 @@ width: 100%;
   color: #fff;
   font-size: 12px;
   backdrop-filter: blur(50px);
+  -webkit-backdrop-filter: blur(50px);
 }
 .itemSelectionPanel {
   border: 1px solid #353535;
@@ -90,6 +94,7 @@ width: 100%;
 .emby-checkbox:checked + span + .checkboxOutline {
   background-color: #ffffff36;
   color: black;
+  -webkit-backdrop-filter: blur(15px);
   backdrop-filter: blur(15px);
 }
 .emby-checkbox:checked + span + .checkboxOutline {
@@ -140,6 +145,7 @@ width: 100%;
 .tmla-mask{
   background: rgba(0, 0, 0, 0.3);
   backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
 }
 .cardOverlayContainer > .cardOverlayFab-primary:hover{
             background-color: rgba(0, 0, 0, 0.459) !important;
@@ -342,6 +348,7 @@ filter: brightness(0.9);
   filter: blur(20px);
   height: 100%;
   bottom: 0;
+  -webkit-backdrop-filter: blur(20px);
   width: 0%;
   background-color: #ffffff3d;
 }
@@ -377,6 +384,7 @@ filter: brightness(0.9);
 	z-index: 1;
   box-shadow:2px 2px 2px -3px rgba(255, 255, 255, 0.39) inset, -2px -2px 2px -2px rgba(255, 255, 255, 0.39) inset, 0px 0px 15px rgba(0, 0, 0, 0.329);
 	backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
 }
 .mdl-slider-background-flex{
   background-color: #ffffff3b;
@@ -488,6 +496,7 @@ transition: 0.2s;
   background: rgba(51, 51, 51, 0.11);
   height: .28em;
   position: relative;
+  -webkit-backdrop-filter: blur(15px);
   backdrop-filter: blur(15px);
 }
 .itemProgressBarForeground {
@@ -498,6 +507,7 @@ transition: 0.2s;
   border-radius: 50px;
 }
 .mdl-slider::-moz-range-thumb {
+  -webkit-backdrop-filter: blur(50px);
   background-color: #fff;
   backdrop-filter: blur(50px);
   box-shadow: 3px 2px 2px -3px rgba(102, 102, 102, 0.39) inset, -2px -2px 2px -2px rgba(108, 108, 108, 0.39) inset, 0px 0px 15px rgba(0, 0, 0, 0.329);
@@ -523,6 +533,7 @@ transition: 0.2s;
   outline: none;
   background: #ffffff17;
   color: aliceblue;
+  -webkit-backdrop-filter: blur(10px);
   cursor: pointer;
   backdrop-filter: blur(10px);
   margin: 10px;
@@ -556,12 +567,14 @@ transition: 0.2s;
 }
 .listItemImageButton.itemAction.paper-icon-button-light {
   backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
   background: #ffffff17;
   scale: 0.7;
   box-shadow: 3px 2px 2px -3px rgba(255, 255, 255, 0.39) inset, -2px -2px 2px -2px rgba(255, 255, 255, 0.39) inset, 0px 0px 15px rgba(0, 0, 0, 0.329);
 }
 .listItemImageButton.itemAction.paper-icon-button-light:hover{
   backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
 }
 .listItemButton.paper-icon-button-light.emby-button::before {
   opacity: 0;
@@ -611,7 +624,6 @@ transition: 0.2s;
 	background: #f000;
 	content: '';
 	z-index: -1;
-	backdrop-filter: blur(15px);
 }
 .iconOsdProgressInner {
   background: #ffffff85;
@@ -631,7 +643,6 @@ transition: 0.2s;
 }
 .videoOsdBottom {
   width: 98%;
-  backdrop-filter: blur(15px);
   left: 50%;
   transform:translateX(-50%) translateY(0px);
   border-radius: 15px;
@@ -639,9 +650,23 @@ transition: 0.2s;
   height: fit-content;
   padding: 6px;
   margin: 10px 0px;
+  box-shadow: 2px 2px 2px -3px rgba(255, 255, 255, 0.65) inset, -2px -2px 2px -3px rgba(255, 255, 255, 0.61) inset, 0px 0px 15px rgba(0, 0, 0, 0.329);
   transition: 0.3s;
   animation: slide-up-centered 0.5s 1 ;
 }
+.videoOsdBottom::before{
+  width: 100%;
+  height: 100%;
+  content: '';
+  border-radius: 15px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+backdrop-filter: blur(15px);
+z-index: -1;
+-webkit-backdrop-filter: blur(15px);
+}
+
 @keyframes  slide-up-centered{
   from{
   transform: translateX(-50%) translateY(50px);
@@ -659,6 +684,7 @@ transition: 0.2s;
   background: #ffa5f521;
   box-shadow: 3px 2px 2px -3px var(--card-indicate-liquid-glass) inset, -2px -2px 2px -2px var(--card-indicate-liquid-glass)  inset, 0px 0px 10px var(--card-indicate-shadow);
   backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
 }
 @media (max-width:513px){
 .emby-tabs-slider {
@@ -668,12 +694,13 @@ transition: 0.2s;
 .emby-tab-button{
   padding: 5px 7px;
 }
-.skinHeader.focuscontainer-x.skinHeader-withBackground.skinHeader-blurred.headroom.noHomeButtonHeader.headroom--not-top.headroom--not-bottom.headroom--pinned{
+.skinHeader.focuscontainer-x.skinHeader-withBackground.skinHeader-blurred.headroom.noHomeButtonHeader.headroom--not-top.headroom--not-bottom.headroom--pinned,.skinHeader.focuscontainer-x.skinHeader-withBackground.skinHeader-blurred.headroom.headroom--not-bottom.headroom--not-top.headroom--pinned{
   animation: yoyo 0.5s 1 ;
 }
-.skinHeader.focuscontainer-x.skinHeader-withBackground.skinHeader-blurred.headroom.noHomeButtonHeader.headroom--not-bottom.headroom--not-top.headroom--unpinned{
+.skinHeader.focuscontainer-x.skinHeader-withBackground.skinHeader-blurred.headroom.noHomeButtonHeader.headroom--not-bottom.headroom--not-top.headroom--unpinned,.skinHeader.focuscontainer-x.skinHeader-withBackground.skinHeader-blurred.headroom.headroom--not-bottom.headroom--not-top.headroom--unpinned{
   animation: yoyoyo 0.5s 1 forwards cubic-bezier(.46,.03,.52,.96);
 }
+
 @keyframes yoyo {
   from{
     transform: translateY(-100px);
@@ -696,6 +723,7 @@ transition: 0.2s;
 }
 .cardOverlayButton.cardOverlayButton-br.itemAction.paper-icon-button-light{
 	backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
 	background: #e6e6e647;
 	margin: 5px;
 }
@@ -742,6 +770,7 @@ transition: 0.2s;
     opacity: 0;
     filter: blur(5px);
     scale: 0.8;
+    -webkit-backdrop-filter: blur(5px);
   }
   to{
     filter: none;
@@ -810,6 +839,7 @@ transition: 0.2s;
 	border-radius: 35px;
   animation: slide-up 1s 1 forwards;
 	backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
 }
 /*start server ui*/
 .MuiButtonBase-root.MuiListItemButton-root.MuiListItemButton-gutters.Mui-selected.css-1mycxcp {
@@ -844,6 +874,7 @@ transition: 0.2s;
 .MuiPaper-root.MuiPaper-elevation.MuiPaper-elevation4.MuiAppBar-root.MuiAppBar-colorDefault.MuiAppBar-positionFixed.mui-fixed.css-jz1vtw {
   background: #867e7e33;
   backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: 15px;
 }
 .css-yknuxp.Mui-selected {
   background-color: rgba(0, 0, 0, 0.29);
@@ -956,6 +987,7 @@ transition: 0.2s;
   scrollbar-width: none;
   background: transparent;
   backdrop-filter: blur(50px);
+  -webkit-backdrop-filter: blur(50px);
 }
 .css-1fmeo47.Mui-checked {
   color: rgb(255, 255, 255);
@@ -1109,6 +1141,7 @@ background: rgba(253, 253, 253, 0);
 }
 .css-wdb3n7 {
 	backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
 	border-radius: 8px;
 	box-shadow: 2px 2px 2px -3px rgba(255, 255, 255, 0.65) inset, -2px -2px 2px -3px rgba(255, 255, 255, 0.61) inset, 0px 0px 15px rgba(0, 0, 0, 0.329);
 	background: rgba(255, 255, 255, 0.096);
@@ -1116,6 +1149,7 @@ background: rgba(253, 253, 253, 0);
 .css-1t8x5q4 {
   background: #ffffff0f;
   border-radius: 25px;
+  -webkit-backdrop-filter: blur(20px);
   backdrop-filter: blur(20px);
   box-shadow: 2px 2px 2px -3px rgba(255, 255, 255, 0.65) inset, -2px -2px 2px -3px rgba(255, 255, 255, 0.61) inset, 0px 0px 15px rgba(0, 0, 0, 0.329);
 }
@@ -1150,10 +1184,6 @@ background: rgba(253, 253, 253, 0);
 .css-46ocr5::after {
   border-bottom: 2px solid #ffffff2e;
 }
-.css-yknuxp:first-child{
-  border-radius: 0px;
-  margin: 0;
-}
 .css-7h500o {
   background: #ff8a8a1c;
   border-radius: 20px;
@@ -1171,6 +1201,34 @@ background: rgba(253, 253, 253, 0);
   position: absolute;
   border-radius: 15px;
 
+}
+/*Mobile layout*/
+.css-epnusv{
+  background: rgba(0, 0, 0, 0);
+  backdrop-filter: blur(50px);
+  -webkit-backdrop-filter: blur(50px);
+}
+.css-yknuxp.Mui-selected {
+  box-shadow: 2px 2px 2px -3px rgb(255, 255, 255) inset, -2px -2px 2px -3px rgb(255, 255, 255) inset, 0px 0px 15px rgba(0, 0, 0, 0.28);
+}
+li.MuiListItem-root:nth-child(1) > a:nth-child(1) {
+  margin: 0px 0px 5px 0px;
+  border-radius: 0px;
+  background: linear-gradient(180deg,#0000003b,transparent);
+}
+.css-1ri48bm{padding-left: 0px;}
+@supports (width:max(1px,1px)) {
+  [dir="ltr"] .padded-right {
+    padding-right: max(env(safe-area-inset-right),3.3%);
+    background: none;
+  }
+}
+@media (orientation: portrait) and (max-width: 40em) {
+  .layout-mobile .itemMiscInfo {
+    margin-bottom: 0 !important;
+    padding-left: 0;
+    justify-content: flex-start !important;
+  }
 }
 /*
 
