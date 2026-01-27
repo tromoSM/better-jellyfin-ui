@@ -1230,6 +1230,59 @@ li.MuiListItem-root:nth-child(1) > a:nth-child(1) {
     justify-content: flex-start !important;
   }
 }
+/*pages*/
+#searchTextInput {
+  background: #ffffff0f;
+  border: none;
+  box-shadow: 2px 2px 2px -3px rgba(255, 255, 255, 0.65) inset, -2px -2px 2px -3px rgba(255, 255, 255, 0.61) inset, 0px 0px 15px rgba(0, 0, 0, 0.329);
+}
+@keyframes fade-up{
+ from{
+  transform: translateY(20px);
+  opacity: 0;
+ }
+ to{
+  transform: translateY(0px);
+  opacity: 1;
+ }
+}
+.searchSuggestionsList.padded-left.padded-right {
+  background: #ffffff05;
+  width: 50%;
+  box-shadow: 2px 2px 2px -3px rgba(255, 255, 255, 0.65) inset, -2px -2px 2px -3px rgba(255, 255, 255, 0.61) inset, 0px 0px 15px rgba(0, 0, 0, 0.329);
+}
+.searchSuggestionsList.padded-left.padded-right div {
+  transition: none;
+}
+.searchSuggestionsList > div > a {
+  font-family: SF Pro,Inter,Mateial icons,sans-serif;
+}
+.searchSuggestionsList > div > a::before {
+  content: '';
+  font-family: Material icons;
+  vertical-align: top;
+  font-weight: 100;
+  padding-right: 5px;
+}
+.verticalSection.searchSuggestions {
+  margin-top: 50px;
+}
+.searchSuggestionsList.padded-left.padded-right {
+  background: #ffffff0a !important;
+  text-align: left !important;
+  box-shadow: 2px 2px 2px -3px rgba(255, 255, 255, 0.65) inset, -2px -2px 2px -3px rgba(255, 255, 255, 0.61) inset, 0px 0px 15px rgba(0, 0, 0, 0.329) !important;
+}
+.padded-left.padded-right.searchFields{
+  animation: fade-up 0.5s 0s 1;
+}
+.sectionTitle.padded-left.padded-right{
+  animation: fade-up 0.5s 200s 1;
+}
+
+.emby-scrollbuttons.padded-right{
+  transition:0.1s;
+}
+
 /*
 
 /*
