@@ -1282,6 +1282,30 @@ li.MuiListItem-root:nth-child(1) > a:nth-child(1) {
 .emby-scrollbuttons.padded-right{
   transition:0.1s;
 }
+.listItemButton.paper-icon-button-light.emby-button.ratingbutton-withrating::after {
+  background: #ff61ac4d;
+  width: 100%;
+  content: '';
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  filter: blur(20px);
+  box-shadow: 2px 2px 2px -3px rgba(255, 255, 255, 0.65) inset, -2px -2px 2px -3px rgba(255, 255, 255, 0.61) inset, 0px 0px 15px rgba(0, 0, 0, 0.329);
+  border-radius: 50px;
+  animation: opacity-scale-a 0.3s;
+  overflow: hidden;
+}
+@keyframes opacity-scale-a{
+  from{
+    opacity: 0;
+    scale: 0.7;
+  }
+  to{
+    opacity: 1;
+    scale: 1;
+  }
+}
 
 /*
 
@@ -1299,13 +1323,8 @@ li.MuiListItem-root:nth-child(1) > a:nth-child(1) {
 ================================================================================================================
 2.HIGH CONTRAST - DISABILITY 
 ==================================================================================================================
-.cardOverlayContainer > .cardOverlayFab-primary {
-  scale: 0;
-  backdrop-filter: invert(1)!important;
-  -webkit-backdrop-filter: invert(1) !important;
-  transition: 0.2s;
-  
-  background-color: rgba(0, 0, 0, 0.29) !important;
+.cardOverlayButtonIcon-hover {
+  background: rgba(0,0,0,.7) !important;
 }
   .dialog {
   background-color: #101010ab;
