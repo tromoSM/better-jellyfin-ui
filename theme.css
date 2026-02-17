@@ -494,9 +494,6 @@ transition: 0.2s;
 [dir="ltr"] .cardOverlayButton-br button:active span{
   scale: 0.8;
 }
-.material-icons.favorite:active{
-  scale: 0.8;
-}
 .mediaInfoItem.mediaInfoText.mediaInfoOfficialRating {
   box-shadow: inset 1px 2px 2px -2px,inset -2px -2px 2px -3px;
   border-radius: 7px;
