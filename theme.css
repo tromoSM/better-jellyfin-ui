@@ -85,7 +85,11 @@ width: 100%;
 .itemSelectionPanel {
   border: 1px solid #353535;
   border-radius: 15px;
+  animation: open-select-pan 0.3s ;
 
+}
+.cardText.cardTextCentered.cardText-secondary {
+  padding-bottom: 5px;
 }
 .checkboxOutline {
   border-color: #ffffff47;
@@ -486,10 +490,16 @@ transition: 0.2s;
 [dir="ltr"] .cardOverlayButton-br button:active span{
   scale: 0.8;
 }
-
+.material-icons.favorite:active{
+  scale: 0.8;
+}
 .mediaInfoItem.mediaInfoText.mediaInfoOfficialRating {
   box-shadow: inset 1px 2px 2px -2px,inset -2px -2px 2px -3px;
   border-radius: 7px;
+}
+.actionSheetScroller.scrollY {
+  scrollbar-width: thin;
+  scrollbar-color: #ffffff14 transparent;
 }
 .itemProgressBar {
   background: #333;
@@ -636,7 +646,7 @@ transition: 0.2s;
 }
 .iconOsd{
   background-color: rgba(255, 248, 248, 0.04);
-  box-shadow: 2px 2px 2px -3px rgba(255, 255, 255, 0.65) inset, -2px -2px 2px -3px rgba(255, 255, 255, 0.61) inset, 0px 0px 15px rgba(0, 0, 0, 0.329);
+  box-shadow:2px 2px 2px -3px rgba(255, 255, 255, 0.51) inset, -2px -2px 2px -3px rgba(255, 255, 255, 0.61) inset, 0px 0px 15px rgba(0, 0, 0, 0.329) !important;
   border-radius: 15px;
   scale: 1;
   transition: 0.2s;
@@ -650,7 +660,7 @@ transition: 0.2s;
   height: fit-content;
   padding: 6px;
   margin: 10px 0px;
-  box-shadow: 2px 2px 2px -3px rgba(255, 255, 255, 0.65) inset, -2px -2px 2px -3px rgba(255, 255, 255, 0.61) inset, 0px 0px 15px rgba(0, 0, 0, 0.329);
+  box-shadow: 1px 2px 2px -3px rgba(255, 255, 255, 0.65) inset, -2px -2px 2px -3px rgba(255, 255, 255, 0.61) inset, 0px 0px 15px rgba(0, 0, 0, 0.329);
   transition: 0.3s;
   animation: slide-up-centered 0.5s 1 ;
 }
@@ -718,9 +728,7 @@ z-index: -1;
     transform: translateY(-100px);
   }}
 }
-.cardOverlayButton-br.flex button span{
-  text-shadow: 0px 0px 10px black;
-}
+
 .cardOverlayButton.cardOverlayButton-br.itemAction.paper-icon-button-light{
 	backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
@@ -764,6 +772,30 @@ z-index: -1;
   to{
     scale: 1;
   }
+}
+@keyframes open-select-pan{
+  from{
+    border: 1px solid #35353500;
+  }
+  to{
+    border: 1px solid #353535;
+  }
+}
+.itemSelectionPanel .checkboxOutline.multiSelectCheckboxOutline{
+  animation: open-scale-small-in 0.3s 0.2s 1 forwards;
+    scale: 0;
+}
+@keyframes open-scale-small-in{
+  from{
+    scale: 0;
+  }
+  50%{
+    scale: 1.05;
+  }
+  to{
+    scale: 1;
+  }
+
 }
 @keyframes opacity-scale{
   from{
@@ -929,11 +961,32 @@ z-index: -1;
 .css-16up0we {
   border-radius: 50px;
 }
+.mainDrawer-scrollContainer.scrollContainer.focuscontainer-y.scrollY {
+	scrollbar-width: thin;
+	scrollbar-color: #ffffff14 transparent;
+}
+.cardBox:not(.visualCardBox) .cardPadder {
+  border-radius: 15px !important;
+  background: linear-gradient(90deg,#1a1a1a,#222);
+  box-shadow: 2px 2px 2px -3px rgba(255, 255, 255, 0.65) inset, -2px -2px 2px -3px rgba(255, 255, 255, 0.61) inset, 0px 0px 15px rgba(0, 0, 0, 0.329) !important;
+}
 .css-l1co2t,.css-g193a2,.css-46ocr5,.css-19qxu2,.css-1y99tin{
   background: #ffffff1a;
   border-radius: 15px;
   box-shadow: 2px 2px 2px -3px rgba(255, 255, 255, 0.65) inset, -2px -2px 2px -3px rgba(255, 255, 255, 0.61) inset, 0px 0px 15px rgba(0, 0, 0, 0.329);
   overflow: hidden;
+}
+.cardText.cardTextCentered.cardText-first {
+	padding: 6px 0px;
+}
+.cardOverlayButton-br.flex button span{
+  text-shadow: 0px 0px 9px #0006;
+}
+.countIndicator.indicator {
+  text-shadow: 0px 0px 8px black;
+}
+.material-icons.indicatorIcon.check {
+  text-shadow: 0px 0px 5px #00000080;
 }
 .css-l1co2t::before,.css-g193a2::before,.css-46ocr5::before,.css-19qxu2::before,.css-1y99tin::before{
   border-bottom: 1px solid rgba(255, 255, 255, 0.11);
@@ -1306,7 +1359,40 @@ li.MuiListItem-root:nth-child(1) > a:nth-child(1) {
     scale: 1;
   }
 }
-
+/*player*/
+.iconOsdProgressOuter {
+	background: #ffffff14;
+	border-radius: .25em;
+	height: .35em;
+	margin: 1.5em .25em 1em;
+}
+/*
+page main header and the player top header use the same ahh class vro 
+ts was for the player
+.flex.align-items-center.flex-grow.headerTop {
+	position: fixed;
+	background: #ffffff0a;
+	width: 99%;
+	top: 0;
+	left: 50%;
+	transform: translate(-50%,0px);
+	margin: 7px 0px;
+	border-radius: 12px;
+  backdrop-filter: blur(15px);
+  padding: 2px 0px !important;
+  box-shadow: 1px 2px 2px -3px rgba(255, 255, 255, 0.65) inset, -2px -2px 2px -3px rgba(255, 255, 255, 0.61) inset, 0px 0px 15px rgba(0, 0, 0, 0.329);
+  -webkit-backdrop-filter: blur(15px);
+  animation: slide-down-c 0.5s 1;
+}
+  */
+@keyframes slide-down-c{
+  from{
+	transform: translate(-50%,-100px);
+  }
+  to{
+	transform: translate(-50%,0px);
+  }
+}
 /*
 
 /*
