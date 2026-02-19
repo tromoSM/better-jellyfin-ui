@@ -48,7 +48,6 @@ Add below the main theme import:
 
 </details>
 
----
 
 <details>
 <summary><strong> High Contrast Interface</strong></summary>
@@ -70,7 +69,6 @@ https://github.com/user-attachments/assets/bb46422f-92ae-41e6-8535-e02880d1867a
 
 </details>
 
----
 
 <details>
 <summary><strong> Scale Up Background Animation on Card Hover</strong></summary>
@@ -93,7 +91,6 @@ https://github.com/user-attachments/assets/899687a8-5201-43ab-9ec6-7efa10e8d3a8
 
 </details>
 
----
 
 <details>
 <summary><strong> Remove Liquid Glass Borders</strong></summary>
@@ -116,7 +113,6 @@ https://github.com/user-attachments/assets/56181924-8a25-4a21-b272-642b82cead16
 
 </details>
 
----
 
 # Example Combined Setup
 
