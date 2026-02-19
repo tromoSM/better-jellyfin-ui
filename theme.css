@@ -3,7 +3,7 @@ Licensed under MIT License
 © 2026 - tromoSM. All right reserved.
 tromoSM/better-jellyfin-ui
 
-version 1.0 release 01
+version 1.01 release 02
 see changelog.md for changes
 */ 
 @font-face {
@@ -509,6 +509,18 @@ transition: 0.2s;
 .actionSheetScroller.scrollY {
   scrollbar-width: thin;
   scrollbar-color: #ffffff14 transparent;
+}
+.upNextContainer {
+	background: #ffffff12;
+	backdrop-filter: blur(15px);
+	-webkit-backdrop-filter: blur(15px);
+	border-radius: 15px;
+  box-shadow: 3px 2px 2px -3px rgba(255, 255, 255, 0.39) inset, -1px -1px 3px -2px rgba(255, 255, 255, 0.39) inset,0px 0px 20px #00000012;
+}
+.upNextDialog button {
+  background: #8c8c8c1c;
+  border-radius: 47px;
+  box-shadow: 3px 2px 2px -4px rgba(255, 255, 255, 0.39) inset, -2px -1px 2px -3px rgba(255, 255, 255, 0.39) inset,0px 0px 20px #00000027;
 }
 .itemProgressBar {
   background: #333;
