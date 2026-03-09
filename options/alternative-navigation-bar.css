@@ -1,0 +1,39 @@
+.emby-tab-button {
+	background: #f5deb30d !important; 
+	border-radius: 50px !important;
+	padding: 10px !important;
+	margin: 6% 0px !important;
+}
+.emby-tabs-slider {
+	position: fixed !important;
+	top: 0 !important;
+	left: 50% !important;
+	transform: translateX(-50%) translateY(11%) !important;
+	background: #f5deb30d !important;
+	border-radius: 50px !important;
+	height: 80% !important;
+	display: flex !important;
+	align-items:center !important;
+	padding: 0px 4px !important;
+	gap: 3px !important;
+}
+.emby-tab-button.emby-button.emby-tab-button-active {
+	background: #ffffff24 !important;
+}
+.emby-button-foreground::before{
+  opacity: 0 !important;
+}
+
+@media (max-width:667px) {
+.emby-tabs-slider {
+	width: fit-content !important;
+	height: fit-content !important;
+	margin-bottom: 8px !important;
+	position: relative !important;
+	transform: translateX(-50%) !important;
+}
+.emby-tab-button {
+	font-weight: 453 !important;
+	margin: 2% 0px !important;
+}
+}
