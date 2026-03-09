@@ -28,7 +28,15 @@ All add-ons require the main theme to be installed first.
 You can combine multiple add-ons together.
 
 ---
+<details>
+  <summary>Custom cover images</summary>
+  <img width="1284" height="148" alt="plugin-isprimCov" src="https://github.com/user-attachments/assets/c5e3cf83-aace-4f67-8600-8d006ad063ee" />
 
+  <ul>
+    <li>Go <a href="https://github.com/tromoSM/better-jellyfin-ui/tree/main/images">Images</a></li>
+    <li>Download and Replace the jellyfin libraries primary cover images with the images in <a href="https://github.com/tromoSM/better-jellyfin-ui/tree/main/images">Images</a></li>
+  </ul>
+</details>
 <details>
 <summary><strong> Floating Header</strong></summary>
 
