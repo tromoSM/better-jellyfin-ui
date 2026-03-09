@@ -3,7 +3,7 @@ Licensed under MIT License
 © 2026 - tromoSM. All right reserved.
 tromoSM/better-jellyfin-ui
 
-version 1.03 release 04
+version 1.04 release 05
 see changelog.md for changes
 */ 
 @font-face {
@@ -1531,6 +1531,58 @@ ts was for the player
 	font-weight: 500;
 	line-height: 1;
 }
+#jellyfin-enhanced-panel{
+  background:rgba(0, 0, 0, 0.36) !important;
+}
+#jellyfin-enhanced-panel .tab-button.active {
+	color: #fff !important;
+	border-bottom-color: #FFF !important;
+	background: linear-gradient(0deg,#ffffff2b,transparent) !important;
+}
+#jellyfin-enhanced-panel .tab-button{
+	background: linear-gradient(0deg,#ffffff00,transparent) !important;
+  transition: 0.2s !important;
+}
+#jellyfin-enhanced-panel > div:nth-child(2) > div:nth-child(1){
+  background: white !important;
+  -webkit-background-clip: text !important;
+}
+#closeSettingsPanel{
+  transition: 0.2s cubic-bezier(0.075, 0.82, 0.165, 1) !important;
+	box-shadow: 2px 2px 3px -4px rgba(255, 255, 255, 0.65) inset, -2px -2px 2px -3px rgba(255, 255, 255, 0.61) inset, 0px 0px 15px rgba(0, 0, 0, 0.08);
+}
+#closeSettingsPanel:active{
+  transform: scale(1.2);
+}
+.panel-main-content{
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.12), rgba(20,20,20,0.95)) !important;
+}
+.shortcuts-container h3{
+  color: white !important; 
+}
+.footer-buttons button ,.footer-buttons a{
+	background: #FFFFFF1F !important;
+	border: none !important;
+	box-shadow: 2px 2px 3px -4px rgba(255, 255, 255, 0.65) inset, -2px -2px 2px -3px rgba(255, 255, 255, 0.61) inset, 0px 0px 15px rgba(0, 0, 0, 0.01);
+	border-radius: 50px !important;
+  color: rgb(255, 255, 255) !important;
+}
+.panel-main-content summary{
+  color: white !important;
+}
+.panel-main-content details{
+  border: none !important;
+  border-radius: 15px !important;
+  background:rgba(74, 74, 74, 0.07) !important;
+  box-shadow: 3px 2px 2px -3px rgba(255, 255, 255, 0.27) inset, -2px -2px 2px -2px rgba(255, 255, 255, 0.21) inset, 0px 0px 15px rgba(0, 0, 0, 0.5);
+}
+.panel-main-content select{
+  border: none;
+}
+.panel-main-content details div{
+border-left-color: white !important;
+}
+/*--------------------------------*/
 /*
 
 /*
@@ -1599,4 +1651,45 @@ ts was for the player
   border-radius: 50px;
 }
 ===========================================================================================================================
+6.ALTERNATIVE NAVIGATION BAR
+============================================================================================================================
+.emby-tab-button {
+	background: #f5deb30d !important; 
+	border-radius: 50px !important;
+	padding: 10px !important;
+	margin: 6% 0px !important;
+}
+.emby-tabs-slider {
+	position: fixed !important;
+	top: 0 !important;
+	left: 50% !important;
+	transform: translateX(-50%) translateY(11%) !important;
+	background: #f5deb30d !important;
+	border-radius: 50px !important;
+	height: 80% !important;
+	display: flex !important;
+	align-items:center !important;
+	padding: 0px 4px !important;
+	gap: 3px !important;
+}
+.emby-tab-button.emby-button.emby-tab-button-active {
+	background: #ffffff24 !important;
+}
+.emby-button-foreground::before{
+  opacity: 0 !important;
+}
+
+@media (max-width:667px) {
+.emby-tabs-slider {
+	width: fit-content !important;
+	height: fit-content !important;
+	margin-bottom: 8px !important;
+	position: relative !important;
+	transform: translateX(-50%) !important;
+}
+.emby-tab-button {
+	font-weight: 453 !important;
+	margin: 2% 0px !important;
+}
+}
 */
