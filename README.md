@@ -120,7 +120,19 @@ https://github.com/user-attachments/assets/56181924-8a25-4a21-b272-642b82cead16
 ```
 
 </details>
+<details>
+  <summary>Alternative navigation bar</summary>
 
+  ### Preview
+  ![igv](https://github.com/tromoSM/better-jellyfin-ui/blob/main/options/screenshots/altrNav.png?raw=true)
+
+  ### Installation
+
+  ```css
+@import url("https://cdn.jsdelivr.net/gh/tromoSM/better-jellyfin-ui@main/options/alternative-navigation-bar.css");
+```
+  
+</details>
 
 # Example Combined Setup
 
