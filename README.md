@@ -155,4 +155,4 @@ https://github.com/user-attachments/assets/56181924-8a25-4a21-b272-642b82cead16
 
 ---
 
-© 2026 - tromoSM. All rights reserved (MIT License)
+© 2026 - tromoSM. All rights reserved (Apache 2.0 License)
