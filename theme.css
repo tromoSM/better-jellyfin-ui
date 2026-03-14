@@ -419,11 +419,12 @@ filter: brightness(0.9);
   width: 0%;
   background-color: #ffffff3d;
 }
+
 .headerTop{
-  padding: 0 !important;
+  padding: 0;
 }
 .skinHeader{
-  padding: 5px 0px !important;
+  padding: 5px 0px;
 }
 .mdl-slider::-moz-range-thumb{
   background-color: #fff;
@@ -1588,10 +1589,6 @@ border-left-color: white !important;
   padding: 0px 0px !important;
 }
 }
-/*FIX: issue #2 reported by @Anderzenn*/
-/*See plugin #7*/
-
-
 /*--------------END------------------*/
 /*
 /*
@@ -1702,7 +1699,7 @@ border-left-color: white !important;
 }
 }
 ===========================================================================================================================
-7.DISPLAY NAVIGATION ON ALL DISPLAY MODES
+7.DISPLAY NAVIGATION ON ALL DISPLAY MODES (UNDER DEVELOPMENT)
 ============================================================================================================================
 @media (min-width: 1600px) {
   .sectionTabs {
