@@ -1,9 +1,9 @@
 /*
-Licensed under MIT License
+Licensed under Apache 2.0
 © 2026 - tromoSM. All right reserved.
 tromoSM/better-jellyfin-ui
 
-version 1.04 release 05
+version 1.05 release 06
 see changelog.md for changes
 */ 
 @font-face {
@@ -768,9 +768,9 @@ z-index: -1;
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
 }
-@media (max-width:513px){
+@media (max-width:880px){
 .emby-tabs-slider {
-  position: relative;
+  position: relative !important; /*dont remove the !important :fixed override 514-879*/
   font-size: 13px !important;
 }
 .emby-tab-button{
@@ -1582,9 +1582,18 @@ ts was for the player
 .panel-main-content details div{
 border-left-color: white !important;
 }
-/*--------------------------------*/
-/*
+/*FIX: issue #1 reported by @WaterShrub*/
+@media (max-width:500px) {
+.skinHeader{
+  padding: 0px 0px !important;
+}
+}
+/*FIX: issue #2 reported by @Anderzenn*/
+/*See plugin #7*/
 
+
+/*--------------END------------------*/
+/*
 /*
  OPTIONS - PLUGINS/PREFERENCES
 ===================
@@ -1691,5 +1700,14 @@ border-left-color: white !important;
 	font-weight: 453 !important;
 	margin: 2% 0px !important;
 }
+}
+===========================================================================================================================
+7.DISPLAY NAVIGATION ON ALL DISPLAY MODES
+============================================================================================================================
+@media (min-width: 1600px) {
+  .sectionTabs {
+      font-size: 83.5% !important;
+      margin-top: 0 !important;
+  }
 }
 */
