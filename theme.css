@@ -3,7 +3,7 @@ Licensed under Apache 2.0
 © 2026 - tromoSM. All right reserved.
 tromoSM/better-jellyfin-ui
 
-version 1.05 release 06
+version 1.06 release 07
 see changelog.md for changes
 */ 
 @font-face {
@@ -1589,6 +1589,12 @@ border-left-color: white !important;
   padding: 0px 0px !important;
 }
 }
+@media (min-width: 1600px) {
+  .sectionTabs {
+      font-size: 83.5% !important;
+      margin-top: 0 !important;
+  }
+}
 /*--------------END------------------*/
 /*
 /*
@@ -1698,13 +1704,5 @@ border-left-color: white !important;
 	margin: 2% 0px !important;
 }
 }
-===========================================================================================================================
-7.DISPLAY NAVIGATION ON ALL DISPLAY MODES (UNDER DEVELOPMENT)
-============================================================================================================================
-@media (min-width: 1600px) {
-  .sectionTabs {
-      font-size: 83.5% !important;
-      margin-top: 0 !important;
-  }
-}
+
 */
