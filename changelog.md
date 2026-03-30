@@ -8,3 +8,5 @@
 | 1.04 | 5 | <ul><li>Added "Jellyfin enhanced" panel styling</li><li>Added an alternative navigation bar plugin</li></ul> | 26.03.10 |
 | 1.05 | 6 | <ul><li>Fixed issue #1</li><li>Fixed issue #2</li><li>Removed unnecessary style overrides.</li><li>Fixed layout issue in the header with smaller devices (width 800px to 500px) in media libraries that have more than 2 pages.</li></ul> | 26.03.14 |
 | 1.06 | 7 | <ul><li>Fix navigation bar display issue on larger devices (width 1600px+).</li></ul> | 26.03.15 |
+| 1.07 | 8 | <ul><li>Added styles for progress ring on movie cards.</li><li>Add plugin : remove jellyfin logo from header</li></ul> | 26.03.30 |
+
