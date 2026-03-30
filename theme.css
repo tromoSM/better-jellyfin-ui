@@ -3,7 +3,7 @@ Licensed under Apache 2.0
 © 2026 - tromoSM. All right reserved.
 tromoSM/better-jellyfin-ui
 
-version 1.07 release 08
+version 1.08 release 09
 see changelog.md for changes
 */ 
 @font-face {
@@ -328,7 +328,7 @@ select:focus{background-color: #3a3a3a;}
 
 .paper-icon-button-light:hover::before{
   transform: translateX(-50%) scale(1);
-  opacity: 1;
+  opacity: 0.8;
   
 }
 .cardOverlayContainer {
@@ -1410,7 +1410,7 @@ li.MuiListItem-root:nth-child(1) > a:nth-child(1) {
 .searchSuggestionsList.padded-left.padded-right {
   background: #ffffff05;
   width: 50%;
-  box-shadow: 2px 2px 2px -3px rgba(255, 255, 255, 0.65) inset, -2px -2px 2px -3px rgba(255, 255, 255, 0.61) inset, 0px 0px 15px rgba(0, 0, 0, 0.329);
+  box-shadow:2px 2px 2px -3px rgba(255, 255, 255, 0.21) inset, -2px -2px 2px -3px rgba(255, 255, 255, 0.63) inset, 0px 0px 15px rgba(0, 0, 0, 0.02) !important;
 }
 .searchSuggestionsList.padded-left.padded-right div {
   transition: none;
@@ -1431,7 +1431,6 @@ li.MuiListItem-root:nth-child(1) > a:nth-child(1) {
 .searchSuggestionsList.padded-left.padded-right {
   background: #ffffff0a !important;
   text-align: left !important;
-  box-shadow: 2px 2px 2px -3px rgba(255, 255, 255, 0.65) inset, -2px -2px 2px -3px rgba(255, 255, 255, 0.61) inset, 0px 0px 15px rgba(0, 0, 0, 0.329) !important;
 }
 .padded-left.padded-right.searchFields{
   animation: fade-up 0.5s 0s 1;
@@ -1592,6 +1591,82 @@ border-left-color: white !important;
 	box-shadow: 2px 2px 3px -4px rgba(255, 255, 255, 0.26) inset, -2px -2px 2px -4px rgba(255, 255, 255, 0.61) inset, 0px 0px 15px rgba(0, 0, 0, 0.08);
 }
 
+.alphaPickerRow-vertical {
+	-webkit-flex-direction: column;
+	flex-direction: column;
+	background: #ffffff08;
+	padding: 10px 0px;
+	border-radius: 50px;
+	box-shadow: 2px 2px 3px -4px rgba(255, 255, 255, 0.29) inset, -2px -2px 2px -4px rgba(255, 255, 255, 0.61) inset, 0px 0px 15px rgba(0, 0, 0, 0.08);
+}
+.alphaPickerButton-selected {
+	background: #f0f8ff17;
+	height: 18px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: white;
+	border-radius: 50px;
+	filter: brightness(1.2);
+	box-shadow: 2px 2px 3px -4px rgba(255, 255, 255, 0.37) inset, -2px -2px 2px -4px rgba(255, 255, 255, 0.61) inset, 0px 0px 15px rgba(0, 0, 0, 0.08);
+  animation: scale-inou-el 0.3s 1 ;
+}
+@keyframes scale-inou-el{
+  from{
+    transform: scale(1);
+	filter: brightness(1);
+  }
+  50%{
+	filter: brightness(3);
+    transform: scale(1.3);
+  }
+  to{
+    transform: scale(1);
+	filter: brightness(1.2);
+  }
+}
+.alphaPickerButton:hover{
+  color: hsla(0, 0%, 100%, 0.61);
+}
+.paper-icon-button-light:active::before{
+  opacity: 1;
+}
+/*PAGE:livetv/guide start*/
+.emby-tabs-slider.guideDateTabsSlider {
+	background: #ffffff0f;
+	border-radius: 11px;
+	box-shadow: 2px 2px 2px -4px rgba(255, 255, 255, 0.25) inset, -2px -2px 2px -4px rgba(255, 255, 255, 0.295) inset, 0px 0px 15px rgba(0, 0, 0, 0.08);
+}
+.guide-headerTimeslots {
+	margin-top: 42px;
+	scrollbar-width: none;
+	background: #ffffff12;
+	border-radius: 14px;
+	box-shadow: 2px 2px 3px -4px rgba(255, 255, 255, 0.37) inset, -2px -2px 2px -4px rgba(255, 255, 255, 0.61) inset, 0px 0px 15px rgba(0, 0, 0, 0.08);
+	padding-top: 5px;
+  
+}
+@media (min-width: 80em) {
+  .channelsContainer, .guide-channelTimeslotHeader {
+    width: 4vw;
+  }
+}
+.timeslotHeaders.scrollX.guideScroller.timeslotHeaders-desktop {
+	scrollbar-width: thin;
+	scrollbar-color: #f0f8ff1a #ffffff0a;
+}
+/*PAGES end*/
+/*TAB FULL POPUP INS INPUT*/
+.mdl-radio__focus-circle{
+  background: #fff;
+}
+/*GLOBAL UI*/
+.collapseContent.expanded {
+	background: #ffffff08;
+	border-radius: 0px 0px 11px 11px;
+}
+
+/*GITHUB ISSUES*/
 /*FIX: issue #1 reported by @WaterShrub*/
 @media (max-width:500px) {
 .skinHeader{
