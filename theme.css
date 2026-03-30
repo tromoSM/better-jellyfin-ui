@@ -3,7 +3,7 @@ Licensed under Apache 2.0
 © 2026 - tromoSM. All right reserved.
 tromoSM/better-jellyfin-ui
 
-version 1.06 release 07
+version 1.07 release 08
 see changelog.md for changes
 */ 
 @font-face {
@@ -1583,6 +1583,15 @@ ts was for the player
 .panel-main-content details div{
 border-left-color: white !important;
 }
+/*end jellyfin enhanced css*/
+
+.progressring-bg {
+	background: #1111119c;
+	backdrop-filter: blur(15px);
+	border: 0px;
+	box-shadow: 2px 2px 3px -4px rgba(255, 255, 255, 0.26) inset, -2px -2px 2px -4px rgba(255, 255, 255, 0.61) inset, 0px 0px 15px rgba(0, 0, 0, 0.08);
+}
+
 /*FIX: issue #1 reported by @WaterShrub*/
 @media (max-width:500px) {
 .skinHeader{
@@ -1596,6 +1605,7 @@ border-left-color: white !important;
       margin-top: 0 !important;
   }
 }
+
 /*--------------END------------------*/
 /*
 /*
@@ -1705,5 +1715,11 @@ border-left-color: white !important;
 	margin: 2% 0px !important;
 }
 }
+===========================================================================================================================
+7.REMOVE JELLYFIN LOGO FROM THE HEADER
+============================================================================================================================
 
+.pageTitleWithDefaultLogo{
+ background: none;
+}
 */
