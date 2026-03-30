@@ -133,6 +133,22 @@ https://github.com/user-attachments/assets/56181924-8a25-4a21-b272-642b82cead16
 ```
   
 </details>
+<details>
+  <summary>Remove jellyfin logo from header</summary>
+
+  ### Preview
+ | before | after |
+ |-|-|
+ | ![better jellyfin ui plugin #7 : remove jellyfin logo from header](https://github.com/user-attachments/assets/704dda3e-baa1-4e03-aa67-d6794345d05f) | ![better jellyfin ui plugin #7 : remove jellyfin logo from header](https://github.com/user-attachments/assets/50b566cf-7b77-4777-8567-fe492fb11692) |
+
+  ### Installation
+
+  ```css
+@import url("https://cdn.jsdelivr.net/gh/tromoSM/better-jellyfin-ui@main/options/Remove-jellyfin-logo-from-header.css");
+```
+
+</details>
+
 
 # Example Combined Setup
 
