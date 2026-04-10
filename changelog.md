@@ -10,3 +10,4 @@
 | 1.06 | 7 | <ul><li>Fix navigation bar display issue on larger devices (width 1600px+).</li></ul> | 26.03.15 |
 | 1.07 | 8 | <ul><li>Added styles for progress ring on movie cards.</li><li>Add plugin : remove jellyfin logo from header</li></ul> | 26.03.30 |
 | 1.08 | 9 | <ul><li>Added styling for picker row</li><li>Add :active effect for paper icons</li><li>Added styling for guide on live TV</li><li>Fix content overflow on guide on live TV</li><li>Added styling for inputs on full popup tabs</li><li>Added styling for collapsible lists on popups</li></ul> | 26.03.30 |
+| 1.09 | 10 | <ul><li>Added styling for cast cards with no image</li><li>Added styling for pages/settings/metadata-editor</li><li>Added styling for pages/settings/quick-connect</li><li>Added styling for subtitle preview container in pages/settings/subtitles</li></ul> | 26.04.11 |
