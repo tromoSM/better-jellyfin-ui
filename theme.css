@@ -3,7 +3,7 @@ Licensed under Apache 2.0
 © 2026 - tromoSM. All right reserved.
 tromoSM/better-jellyfin-ui
 
-version 1.08 release 09
+version 1.09 release 10
 see changelog.md for changes
 */ 
 @font-face {
@@ -1625,6 +1625,7 @@ border-left-color: white !important;
 	filter: brightness(1.2);
   }
 }
+
 .alphaPickerButton:hover{
   color: hsla(0, 0%, 100%, 0.61);
 }
@@ -1655,6 +1656,7 @@ border-left-color: white !important;
 	scrollbar-width: thin;
 	scrollbar-color: #f0f8ff1a #ffffff0a;
 }
+
 /*PAGES end*/
 /*TAB FULL POPUP INS INPUT*/
 .mdl-radio__focus-circle{
@@ -1664,6 +1666,54 @@ border-left-color: white !important;
 .collapseContent.expanded {
 	background: #ffffff08;
 	border-radius: 0px 0px 11px 11px;
+}
+/*addit: side/cast/nopf*/
+.defaultCardBackground3,.defaultCardBackground1,.defaultCardBackground2{
+	background-color: transparent;
+}
+/*lib/settings/metadata = see issue#3*/
+
+.metadataSidebarIcon {
+	background: linear-gradient(90deg,#2b2b2b,#474747) !important;
+	-webkit-background-clip: text !important;
+	-webkit-text-fill-color: transparent !important;
+}
+.editorNode {
+	display: flex;
+	align-items: center;
+}
+.jstree-wholerow-hovered {
+	background: #8a8a8a0f !important;
+}
+.jstree-wholerow{
+  border-radius: 11px !important;
+}
+.jstree-default .jstree-wholerow-clicked{
+	background: #ffffff0d !important;
+	box-shadow: 2px 2px 3px -5px rgba(255, 255, 255, 0.41) inset, -2px -2px 2px -4px rgba(255, 255, 255, 0.61) inset, 0px 0px 15px rgba(0, 0, 0, 0.08);
+}
+.jstree-wholerow-ul .jstree-wholerow:not(:first-child){
+  right: 0 !important;
+  position: absolute !important;
+  width: 90% !important;
+  margin-right: 10px !important;
+}.formDialogHeader {
+	border-radius: 15px;
+	padding: 0 10px;
+	margin: 10px;
+}
+/*lib/settings/qui*/
+.quickConnectError {
+	border-radius: 8px;
+	background: #ff4a4a12;
+	padding: 6px 10px !important;
+	display: flex;
+	align-items: center;
+	box-shadow: 2px 2px 3px -4px rgba(255, 131, 131, 0.26) inset, -2px -2px 2px -4px rgba(255, 106, 106, 0.61) inset, 0px 0px 15px rgba(0, 0, 0, 0.08);
+}
+/*lib/settings/sub*/
+.subtitleappearance-preview.flex.align-items-center.justify-content-center {
+	border-radius: 15px;
 }
 
 /*GITHUB ISSUES*/
@@ -1680,6 +1730,14 @@ border-left-color: white !important;
       margin-top: 0 !important;
   }
 }
+
+/*EXPERIMENTAL NOT FEATURED IN RELEASE*/
+/*scroller button disabled to op0 or boxOp0 ERR=css detect 2[dis] after scrollend on all */
+/*
+.emby-scrollbuttons.padded-right:has([disabled]:nth-child(2)){
+box-shadow: none !important;
+}
+*/
 
 /*--------------END------------------*/
 /*
