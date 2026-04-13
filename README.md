@@ -29,7 +29,7 @@ You can combine multiple add-ons together.
 
 ---
 <details>
-  <summary>Custom cover images</summary>
+  <summary><strong>Custom cover images</strong></summary>
   <img width="1284" height="148" alt="plugin-isprimCov" src="https://github.com/user-attachments/assets/c5e3cf83-aace-4f67-8600-8d006ad063ee" />
 
   <ul>
@@ -121,7 +121,7 @@ https://github.com/user-attachments/assets/56181924-8a25-4a21-b272-642b82cead16
 
 </details>
 <details>
-  <summary>Alternative navigation bar</summary>
+  <summary><Strong>Alternative navigation bar</Strong></summary>
 
   ### Preview
   ![igv](https://github.com/tromoSM/better-jellyfin-ui/blob/main/options/screenshots/altrNav.png?raw=true)
@@ -134,7 +134,7 @@ https://github.com/user-attachments/assets/56181924-8a25-4a21-b272-642b82cead16
   
 </details>
 <details>
-  <summary>Remove jellyfin logo from header</summary>
+  <summary><strong>Remove jellyfin logo from header</strong></summary>
 
   ### Preview
  | before | after |
@@ -148,7 +148,27 @@ https://github.com/user-attachments/assets/56181924-8a25-4a21-b272-642b82cead16
 ```
 
 </details>
-
+<br>
+<details id='manual'>
+  <summary><strong>Manual options</strong></summary>
+  <p>
+    Customize the variables below to suit your preferences. Once edited, paste the code after all existing imports in <strong>Dashboard → General → Branding → Custom CSS</strong>.</p>
+  
+  ```css
+:root{
+  /*active card indicators*/
+  --card-indicate-bg:rgba(255, 169, 184, 0.534);
+  --card-indicate-liquid-glass:rgba(253, 185, 255, 0.39) ;
+  --card-indicate-shadow:rgba(255, 154, 238, 0.329);
+  --card-indicate-icon-fill:#ffb0d9;
+  /*Backgound*/
+  --background-glow-color:#240000;
+  /*Backdrop image styling*/
+  --backdrop-bg-color:rgba(0, 0, 0, 0.87);
+  --backdrop-filter:blur(20px) saturate(120%) contrast(120%) brightness(110%);
+}
+  ```
+</details>
 
 # Example Combined Setup
 
