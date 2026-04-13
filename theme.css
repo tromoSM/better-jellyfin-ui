@@ -3,8 +3,10 @@ Licensed under Apache 2.0
 © 2026 - tromoSM. All right reserved.
 tromoSM/better-jellyfin-ui
 
-version 1.10 release 11
+version 1.11 release 12
 see changelog.md for changes
+
+all id start with "youtube-preview" yt iframe style contrainer inside -> video root iframe yt trailer shit add scale in. start with blur
 */ 
 @font-face {
   font-family: Inter;
@@ -18,6 +20,9 @@ see changelog.md for changes
   --card-indicate-icon-fill:#ffb0d9;
   /*Backgound*/
   --background-glow-color:#240000;
+  /*Backdrop image*/
+  --backdrop-bg-color:rgba(0, 0, 0, 0.87);
+  --backdrop-filter:blur(20px) saturate(120%) contrast(120%) brightness(110%);
 }
 :root{
   --jf-palette-primary-main:white;
@@ -115,8 +120,8 @@ backdrop-filter: blur(15px);
   background: #00000057;
   transition:0.1s;
 }
-.backgroundContainer{
-background:linear-gradient(0deg,#111 50%,var(--background-glow-color));
+.backgroundContainer:not(.withBackdrop) /*req1*/{
+	background: linear-gradient(0deg,#111 50%,var(--background-glow-color));
 }
 .touch-menu-la.transition{
 transition: transform .24s cubic-bezier(0.075, 0.82, 0.165, 1) ease-out,left .26s cubic-bezier(0.075, 0.82, 0.165, 1) ease-out,-webkit-transform .24s cubic-bezier(0.075, 0.82, 0.165, 1) ease-out;
@@ -169,8 +174,8 @@ width: 100%;
 .emby-checkbox:focus:not(:checked) + span + .checkboxOutline {
   border-color: #ffffff3b;
 }
-.checkboxContainer{
-  margin: 5px;
+.checkboxContainer /*1.11*/{
+	margin: 6px 4px;
 }
 .checkboxIcon {
   color: #fff;
@@ -1756,6 +1761,24 @@ border-left-color: white !important;
 	transform: scale(1.1);
 	background: #ffffff12;
 }
+/*111*/
+.withMultiSelect .cardScalable {
+	transform: scale(0.95);
+}
+.cardScalable{
+  transition: 0.2s;
+}
+/*REQUESTS FROM USERS*/
+
+/*#1 by @Cryborg12 (backdrop background)*/
+.backdropImage {
+	filter: var(--backdrop-filter) !important;
+}
+.backgroundContainer.withBackdrop{
+   background: var(--backdrop-bg-color) !important;
+}
+
+/*END-REQ---------------------------------*/
 /*GITHUB ISSUES*/
 /*FIX: issue #1 reported by @WaterShrub*/
 @media (max-width:500px) {
