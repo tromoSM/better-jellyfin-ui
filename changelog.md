@@ -13,6 +13,6 @@
 | 1.09 | 10 | <ul><li>Added styling for cast cards with no image</li><li>Added styling for pages/settings/metadata-editor</li><li>Added styling for pages/settings/quick-connect</li><li>Added styling for subtitle preview container in pages/settings/subtitles</li></ul> | 26.04.11 |
 | 1.10 | 11 | <ul><li>Added more support for missing image cards</li><li>Added overlay card animations $\color{red}{\text{Ϟ}}$</li><li>Added styling for pages/settings/profile profile picture container</li><li>Added styling and animations to 'add image' buttons</li><li>Modified previous styling in 'add image' buttons.</li></ul> | 26.04.12 |
 | 1.11 | 12 | <ul><li>Added animation in multi-selctor screen</li><li>Change styling of select-indicator to match muti-selector animation</li><li>Added support for backdrop-images `requested by @Cryborg12`</li><li>Added manual options</li></ul> | 26.04.14 |
-| 1.12 | 13 | <ul><li>Fix issue #9: pages/live-tv/guide Channel Logos not showing</li><li>Added styles for pages/live-tv/guide logo container```:active```</li></ul> | 26.04.29 |
+| 1.12 | 13 | <ul><li>Fix issue #9: pages/live-tv/guide Channel Logos not showing `requested by @SerafinoBarwinski`</li><li>Added styles for pages/live-tv/guide logo container when active</li></ul> | 26.04.29 |
 
 $\color{red}{\text{Ϟ}}$ = major change in ui
