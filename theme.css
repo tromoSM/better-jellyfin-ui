@@ -3,7 +3,7 @@ Licensed under Apache 2.0
 © 2026 - tromoSM. All right reserved.
 tromoSM/better-jellyfin-ui
 
-version 1.11 release 12
+version 1.12 release 13
 see changelog.md for changes
 */ 
 @font-face {
@@ -1766,6 +1766,11 @@ border-left-color: white !important;
 .cardScalable{
   transition: 0.2s;
 }
+/*112*/
+.guide-channelHeaderCell:focus, .programCell:focus {
+	background-color: #ffffff0a !important;
+	color: #fff !important;
+}
 /*REQUESTS FROM USERS*/
 
 /*#1 by @Cryborg12 (backdrop background)*/
@@ -1778,18 +1783,24 @@ border-left-color: white !important;
 
 /*END-REQ---------------------------------*/
 /*GITHUB ISSUES*/
-/*FIX: issue #1 reported by @WaterShrub*/
+/*FIX: issue #1 reported by @WaterShrub  | better-jellyfin-ui/issues/1*/
 @media (max-width:500px) {
 .skinHeader{
   padding: 0px 0px !important;
 }
 }
-/*FIX: issue #2 reported by @Anderzenn*/
+/*FIX: issue #2 reported by @Anderzenn  | better-jellyfin-ui/issues/2*/
 @media (min-width: 1600px) {
   .sectionTabs {
       font-size: 83.5% !important;
       margin-top: 0 !important;
   }
+}
+/*FIX: issue #9 reported by @SerafinoBarwinski  | better-jellyfin-ui/issues/9 */
+.guideChannelImage{
+  margin: 0;
+	width: 90%;
+	padding: 0;
 }
 
 /*EXPERIMENTAL NOT FEATURED IN RELEASE*/
@@ -1925,4 +1936,9 @@ box-shadow: none !important;
 	border-radius: 15px !important;
 	backdrop-filter: brightness(1.3) !important;
 }
+==========================
+9.better detailLogo 
+====
+.detailLogo {
+mix-blend-mode: soft-light;}
 */
