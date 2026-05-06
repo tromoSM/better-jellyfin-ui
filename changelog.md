@@ -15,5 +15,6 @@
 | 1.11 | 12 | <ul><li>Added animation in multi-selctor screen</li><li>Change styling of select-indicator to match muti-selector animation</li><li>Added support for backdrop-images `requested by @Cryborg12`</li><li>Added manual options</li></ul> | 26.04.14 |
 | 1.12 | 13 | <ul><li>Fix issue #9: pages/live-tv/guide Channel Logos not showing `requested by @SerafinoBarwinski`</li><li>Added styles for pages/live-tv/guide logo container when active</li></ul> | 26.04.29 |
 | 1.13 | 14 | <ul><li>Fix issue #11 : change-images/imagecontainer cuts off `requested by @oswie`</li><li>removed line 277-280 and fixed in FIX : issues</li></ul> | 26.05.05 |
+| 1.14 | 15 | <ul><li>Fix issue #11 /2 : episode-thumbnails/thumbnail alignment `requested by @oswie`</li><li>Change design of shows/seasons/episodes-card </li></ul> | 26.05.06 |
 
 $\color{red}{\text{Ϟ}}$ = major change in ui
