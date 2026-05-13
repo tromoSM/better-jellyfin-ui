@@ -5,7 +5,7 @@
 A modern UI enhancement theme for Jellyfin focused on cleaner layout, smoother animations, and ios like design.
 
 ---
-
+[![](https://data.jsdelivr.com/v1/package/gh/tromoSM/better-jellyfin-ui/badge)](https://www.jsdelivr.com/package/gh/tromoSM/better-jellyfin-ui)
 ## Installation
 
 Go to:
