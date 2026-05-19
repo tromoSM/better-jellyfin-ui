@@ -191,5 +191,5 @@ https://github.com/user-attachments/assets/56181924-8a25-4a21-b272-642b82cead16
 
 ---
 
-###### [send feedback or request features](https://tromosm.ct.ws/?feedback=true)
+###### [send feedback or request features](https://tromosm.gt.tc/?feedback=true)
 ###### © 2026 - tromoSM. Licensed under Apache 2.0.
