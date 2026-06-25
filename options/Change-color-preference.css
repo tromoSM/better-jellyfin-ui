@@ -4,6 +4,19 @@
   --card-indicate-liquid-glass:rgba(253, 185, 255, 0.39) ;
   --card-indicate-shadow:rgba(255, 154, 238, 0.329);
   --card-indicate-icon-fill:#ffb0d9;
+  
   /*Backgound*/
   --background-glow-color:#240000;
+  
+  /*Backdrop image*/
+  --backdrop-bg-color:rgba(0, 0, 0, 0.87);
+  --backdrop-filter:blur(20px) saturate(120%) contrast(120%) brightness(110%);
+  
+  /*Blur value - requested by @Aceman67*/
+  --extra-frosted:50px; /*extra frosted ui: panels,headers etc*/
+  --medium-frosted:20px;
+  --largeui-frosted:15px;/*mostly used by large ui*/
+  --smallui-frosted:10px;/*mostly used by smaller ui*/
+  --lite-frosted:5px;/*also used by card animation*/
+  --extrathin-frostlayer:2px;
 }
