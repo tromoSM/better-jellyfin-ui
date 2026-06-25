@@ -3,8 +3,10 @@ Licensed under Apache 2.0
 © 2026 - tromoSM. All right reserved.
 tromoSM/better-jellyfin-ui
 
-version 1.15 release 16
+version 1.16 release 17
 see changelog.md for changes
+
+all id start with "youtube-preview" yt iframe style contrainer inside -> video root iframe yt trailer shit add scale in. start with blur
 */ 
 @font-face {
   font-family: Inter;
@@ -21,13 +23,22 @@ see changelog.md for changes
   /*Backdrop image*/
   --backdrop-bg-color:rgba(0, 0, 0, 0.87);
   --backdrop-filter:blur(20px) saturate(120%) contrast(120%) brightness(110%);
+  
+  /*Blur value - requested by @Aceman67*/
+
+  --extra-frosted:50px; /*extra frosted ui: panels,headers etc*/
+  --medium-frosted:20px;
+  --largeui-frosted:15px;/*mostly used by large ui*/
+  --smallui-frosted:10px;/*mostly used by smaller ui*/
+  --lite-frosted:5px;/*also used by card animation*/
+  --extrathin-frostlayer:2px;
 }
 :root{
   --jf-palette-primary-main:white;
 }
 .skinHeader-withBackground {
   background-color: #00000054;
-  backdrop-filter: blur(50px);
+  backdrop-filter: blur(var(--extra-frosted));
   -webkit-backdrop-filter: blur(50px);
 }
 .emby-tabs-slider {
@@ -93,14 +104,14 @@ see changelog.md for changes
 }
 .dialog{
 background-color: #101010ab;
-backdrop-filter: blur(15px);
--webkit-backdrop-filter: blur(15px);
+backdrop-filter: blur(var(--largeui-frosted));
+-webkit-backdrop-filter: blur(var(--largeui-frosted));
   }
 
 .cardOverlayContainer > .cardOverlayFab-primary{
             scale: 0;
-    backdrop-filter: blur(15px);
-    -webkit-backdrop-filter: blur(15px);
+    backdrop-filter: blur(var(--largeui-frosted));
+    -webkit-backdrop-filter: blur(var(--largeui-frosted));
             transition: 0.2s;
             background-color: rgba(0, 0, 0, 0.29) !important;
 }
@@ -111,8 +122,8 @@ backdrop-filter: blur(15px);
   }
 }.drawer-open, .mainDrawer {
   background-color: #10101057;
-  backdrop-filter: blur(50px);
-  -webkit-backdrop-filter: blur(50px);
+  backdrop-filter: blur(var(--extra-frosted));
+  -webkit-backdrop-filter: blur(var(--extra-frosted));
 }
 .navMenuOption:hover{
   background: #00000057;
@@ -144,8 +155,8 @@ width: 100%;
   background: #00000030;
   color: #fff;
   font-size: 12px;
-  backdrop-filter: blur(50px);
-  -webkit-backdrop-filter: blur(50px);
+  backdrop-filter: blur(var(--extra-frosted));
+  -webkit-backdrop-filter: blur(var(--extra-frosted));
 }
 .itemSelectionPanel {
   border: 1px solid #353535;
@@ -163,8 +174,8 @@ width: 100%;
 .emby-checkbox:checked + span + .checkboxOutline {
   background-color: #ffffff36;
   color: black;
-  -webkit-backdrop-filter: blur(15px);
-  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(var(--largeui-frosted));
+  backdrop-filter: blur(var(--largeui-frosted));
 }
 .emby-checkbox:checked + span + .checkboxOutline {
   border-color: #6a6a6a38 !important;
@@ -213,8 +224,8 @@ width: 100%;
 }
 .tmla-mask{
   background: rgba(0, 0, 0, 0.3);
-  backdrop-filter: blur(2px);
-  -webkit-backdrop-filter: blur(2px);
+  backdrop-filter: blur(var(--extrathin-frostlayer));
+  -webkit-backdrop-filter: blur(var(--extrathin-frostlayer));
 }
 .cardOverlayContainer > .cardOverlayFab-primary:hover{
             background-color: rgba(0, 0, 0, 0.459) !important;
@@ -268,8 +279,8 @@ html,body{
   background: linear-gradient(0deg,#101010,transparent);
 }
 .skinHeader.semiTransparent {
-  -webkit-backdrop-filter:blur(15px)  !important;
-  backdrop-filter: blur(15px) !important;
+  -webkit-backdrop-filter:blur(var(--largeui-frosted))  !important;
+  backdrop-filter: blur(var(--largeui-frosted)) !important;
   background-color: rgba(0,0,0,.4);
 }
 /*SEE ISSUE #11
@@ -384,7 +395,7 @@ filter: brightness(0.9);
   overflow: hidden;
 }
 .css-4mb1j7{
-  filter: blur(20px);
+  filter: blur(var(--medium-frosted));
 }
 .navMenuOption-selected{
   background: #202020 !important;
@@ -394,8 +405,8 @@ filter: brightness(0.9);
 }
 .countIndicator, .fullSyncIndicator, .mediaSourceIndicator, .playedIndicator{
   background: #ffffff21;
-  -webkit-backdrop-filter: blur(10px);
-  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(var(--smallui-frosted));
+  backdrop-filter: blur(var(--smallui-frosted));
   box-shadow: 3px 2px 2px -3px rgba(255, 255, 255, 0.39) inset, -2px -2px 2px -2px rgba(255, 255, 255, 0.39) inset, 0px 0px 15px rgba(0, 0, 0, 0.329);
 }
 .card{
@@ -417,10 +428,10 @@ filter: brightness(0.9);
   transition: 0.3s  cubic-bezier(0.77, 0, 0.175, 1);;
   position: absolute;
   left: 0;
-  filter: blur(20px);
+  filter: blur(var(--medium-frosted));
   height: 100%;
   bottom: 0;
-  -webkit-backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(var(--medium-frosted));
   width: 0%;
   background-color: #ffffff3d;
 }
@@ -456,8 +467,8 @@ filter: brightness(0.9);
 	transform: translate3d(-50%,-120%,0);
 	z-index: 1;
   box-shadow:2px 2px 2px -3px rgba(255, 255, 255, 0.39) inset, -2px -2px 2px -2px rgba(255, 255, 255, 0.39) inset, 0px 0px 15px rgba(0, 0, 0, 0.329);
-	backdrop-filter: blur(15px);
-  -webkit-backdrop-filter: blur(15px);
+	backdrop-filter: blur(var(--largeui-frosted));
+  -webkit-backdrop-filter: blur(var(--largeui-frosted));
 }
 .mdl-slider-background-flex{
   background-color: #ffffff3b;
@@ -569,8 +580,8 @@ transition: 0.2s;
 }
 .upNextContainer {
 	background: #ffffff12;
-	backdrop-filter: blur(15px);
-	-webkit-backdrop-filter: blur(15px);
+	backdrop-filter: blur(var(--largeui-frosted));
+	-webkit-backdrop-filter: blur(var(--largeui-frosted));
 	border-radius: 15px;
   box-shadow: 3px 2px 2px -3px rgba(255, 255, 255, 0.39) inset, -1px -1px 3px -2px rgba(255, 255, 255, 0.39) inset,0px 0px 20px #00000012;
 }
@@ -584,8 +595,8 @@ transition: 0.2s;
   background: rgba(51, 51, 51, 0.11);
   height: .28em;
   position: relative;
-  -webkit-backdrop-filter: blur(15px);
-  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(var(--largeui-frosted));
+  backdrop-filter: blur(var(--largeui-frosted));
 }
 .itemProgressBarForeground {
   background: #fff;
@@ -595,9 +606,9 @@ transition: 0.2s;
   border-radius: 50px;
 }
 .mdl-slider::-moz-range-thumb {
-  -webkit-backdrop-filter: blur(50px);
+  -webkit-backdrop-filter: blur(var(--extra-frosted));
   background-color: #fff;
-  backdrop-filter: blur(50px);
+  backdrop-filter: blur(var(--extra-frosted));
   box-shadow: 3px 2px 2px -3px rgba(102, 102, 102, 0.39) inset, -2px -2px 2px -2px rgba(108, 108, 108, 0.39) inset, 0px 0px 15px rgba(0, 0, 0, 0.329);
 }
 .formDialogFooterItem{
@@ -621,9 +632,9 @@ transition: 0.2s;
   outline: none;
   background: #ffffff17;
   color: aliceblue;
-  -webkit-backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(var(--smallui-frosted));
   cursor: pointer;
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(var(--smallui-frosted));
   margin: 10px;
 	box-shadow: 3px 2px 2px -3px rgba(255, 255, 255, 0.39) inset, -2px -2px 2px -2px rgba(255, 255, 255, 0.39) inset, 0px 0px 15px rgba(0, 0, 0, 0.329);
   position: fixed;
@@ -654,15 +665,15 @@ transition: 0.2s;
   transition: 0.3s cubic-bezier(.23,1,.32,1);
 }
 .listItemImageButton.itemAction.paper-icon-button-light {
-  backdrop-filter: blur(2px);
-  -webkit-backdrop-filter: blur(2px);
+  backdrop-filter: blur(var(--extrathin-frostlayer));
+  -webkit-backdrop-filter: blur(var(--extrathin-frostlayer));
   background: #ffffff17;
   scale: 0.7;
   box-shadow: 3px 2px 2px -3px rgba(255, 255, 255, 0.39) inset, -2px -2px 2px -2px rgba(255, 255, 255, 0.39) inset, 0px 0px 15px rgba(0, 0, 0, 0.329);
 }
 .listItemImageButton.itemAction.paper-icon-button-light:hover{
-  backdrop-filter: blur(5px);
-  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(var(--lite-frosted));
+  -webkit-backdrop-filter: blur(var(--lite-frosted));
 }
 .listItemButton.paper-icon-button-light.emby-button::before {
   opacity: 0;
@@ -753,9 +764,9 @@ transition: 0.2s;
   position: absolute;
   left: 0;
   bottom: 0;
-backdrop-filter: blur(15px);
+backdrop-filter: blur(var(--largeui-frosted));
 z-index: -1;
--webkit-backdrop-filter: blur(15px);
+-webkit-backdrop-filter: blur(var(--largeui-frosted));
 }
 
 @keyframes  slide-up-centered{
@@ -774,8 +785,8 @@ z-index: -1;
 .cardOverlayButton.cardOverlayButton-hover.itemAction.paper-icon-button-light.emby-button.ratingbutton-withrating,.cardOverlayButton.cardOverlayButton-hover.itemAction.paper-icon-button-light.emby-button.playstatebutton-played{
   background: #ffa5f521;
   box-shadow: 3px 2px 2px -3px var(--card-indicate-liquid-glass) inset, -2px -2px 2px -2px var(--card-indicate-liquid-glass)  inset, 0px 0px 10px var(--card-indicate-shadow);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(var(--smallui-frosted));
+  -webkit-backdrop-filter: blur(var(--smallui-frosted));
 }
 @media (max-width:880px){
 .emby-tabs-slider {
@@ -811,8 +822,8 @@ z-index: -1;
 }
 
 .cardOverlayButton.cardOverlayButton-br.itemAction.paper-icon-button-light{
-	backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
+	backdrop-filter: blur(var(--smallui-frosted));
+  -webkit-backdrop-filter: blur(var(--smallui-frosted));
 	background: #e6e6e647;
 	margin: 5px;
 }
@@ -881,9 +892,9 @@ z-index: -1;
 @keyframes opacity-scale{
   from{
     opacity: 0;
-    filter: blur(5px);
+    filter: blur(var(--lite-frosted));
     scale: 0.8;
-    -webkit-backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(var(--lite-frosted));
   }
   to{
     filter: none;
@@ -951,8 +962,8 @@ z-index: -1;
 	background: transparent;
 	border-radius: 35px;
   animation: slide-up 1s 1 forwards;
-	backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
+	backdrop-filter: blur(var(--smallui-frosted));
+  -webkit-backdrop-filter: blur(var(--smallui-frosted));
 }
 /*start server ui*/
 .MuiButtonBase-root.MuiListItemButton-root.MuiListItemButton-gutters.Mui-selected.css-1mycxcp {
@@ -971,10 +982,10 @@ z-index: -1;
 }
 .css-zsn29i {
 	background: #ffffff17 !important;
-	backdrop-filter: blur(10px);
+	backdrop-filter: blur(var(--smallui-frosted));
 	border-radius: 24px;
   animation: sc-ad-in 0.2s;
-	-webkit-backdrop-filter: blur(10px);
+	-webkit-backdrop-filter: blur(var(--smallui-frosted));
 }
 .css-1owa3n4::after {
   border-bottom: 2px solid rgb(255, 255, 255);
@@ -1021,7 +1032,7 @@ z-index: -1;
 }
 .MuiPaper-root.MuiPaper-elevation.MuiPaper-elevation4.MuiAppBar-root.MuiAppBar-colorDefault.MuiAppBar-positionFixed.mui-fixed.css-jz1vtw {
   background: #867e7e33;
-  backdrop-filter: blur(15px);
+  backdrop-filter: blur(var(--largeui-frosted));
   -webkit-backdrop-filter: 15px;
 }
 .css-yknuxp.Mui-selected {
@@ -1155,8 +1166,8 @@ z-index: -1;
   scroll-behavior: smooth;
   scrollbar-width: none;
   background: transparent;
-  backdrop-filter: blur(50px);
-  -webkit-backdrop-filter: blur(50px);
+  backdrop-filter: blur(var(--extra-frosted));
+  -webkit-backdrop-filter: blur(var(--extra-frosted));
 }
 .css-1fmeo47.Mui-checked {
   color: rgb(255, 255, 255);
@@ -1309,8 +1320,8 @@ background: rgba(253, 253, 253, 0);
   border-bottom: 1px solid rgba(81, 81, 81, 0.25);
 }
 .css-wdb3n7 {
-	backdrop-filter: blur(15px);
-  -webkit-backdrop-filter: blur(15px);
+	backdrop-filter: blur(var(--largeui-frosted));
+  -webkit-backdrop-filter: blur(var(--largeui-frosted));
 	border-radius: 8px;
 	box-shadow: 2px 2px 2px -3px rgba(255, 255, 255, 0.65) inset, -2px -2px 2px -3px rgba(255, 255, 255, 0.61) inset, 0px 0px 15px rgba(0, 0, 0, 0.329);
 	background: rgba(255, 255, 255, 0.096);
@@ -1318,8 +1329,8 @@ background: rgba(253, 253, 253, 0);
 .css-1t8x5q4 {
   background: #ffffff0f;
   border-radius: 25px;
-  -webkit-backdrop-filter: blur(20px);
-  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(var(--medium-frosted));
+  backdrop-filter: blur(var(--medium-frosted));
   box-shadow: 2px 2px 2px -3px rgba(255, 255, 255, 0.65) inset, -2px -2px 2px -3px rgba(255, 255, 255, 0.61) inset, 0px 0px 15px rgba(0, 0, 0, 0.329);
 }
 .css-8mwzdy {
@@ -1374,8 +1385,8 @@ background: rgba(253, 253, 253, 0);
 /*Mobile layout*/
 .css-epnusv{
   background: rgba(0, 0, 0, 0);
-  backdrop-filter: blur(50px);
-  -webkit-backdrop-filter: blur(50px);
+  backdrop-filter: blur(var(--extra-frosted));
+  -webkit-backdrop-filter: blur(var(--extra-frosted));
 }
 .css-yknuxp.Mui-selected {
   box-shadow: 2px 2px 2px -3px rgb(255, 255, 255) inset, -2px -2px 2px -3px rgb(255, 255, 255) inset, 0px 0px 15px rgba(0, 0, 0, 0.28);
@@ -1458,7 +1469,7 @@ li.MuiListItem-root:nth-child(1) > a:nth-child(1) {
   position: absolute;
   left: 0;
   top: 0;
-  filter: blur(20px);
+  filter: blur(var(--medium-frosted));
   box-shadow: 2px 2px 2px -3px rgba(255, 255, 255, 0.65) inset, -2px -2px 2px -3px rgba(255, 255, 255, 0.61) inset, 0px 0px 15px rgba(0, 0, 0, 0.329);
   border-radius: 50px;
   animation: opacity-scale-a 0.3s;
@@ -1493,10 +1504,10 @@ ts was for the player
 	transform: translate(-50%,0px);
 	margin: 7px 0px;
 	border-radius: 12px;
-  backdrop-filter: blur(15px);
+  backdrop-filter: blur(var(--largeui-frosted));
   padding: 2px 0px !important;
   box-shadow: 1px 2px 2px -3px rgba(255, 255, 255, 0.65) inset, -2px -2px 2px -3px rgba(255, 255, 255, 0.61) inset, 0px 0px 15px rgba(0, 0, 0, 0.329);
-  -webkit-backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(var(--largeui-frosted));
   animation: slide-down-c 0.5s 1;
 }
   */
@@ -1594,7 +1605,7 @@ border-left-color: white !important;
 
 .progressring-bg {
 	background: #1111119c;
-	backdrop-filter: blur(15px);
+	backdrop-filter: blur(var(--largeui-frosted));
 	border: 0px;
 	box-shadow: 2px 2px 3px -4px rgba(255, 255, 255, 0.26) inset, -2px -2px 2px -4px rgba(255, 255, 255, 0.61) inset, 0px 0px 15px rgba(0, 0, 0, 0.08);
 }
@@ -1872,6 +1883,7 @@ border-left-color: white !important;
  .listItem.listItem-largeImage.listItem-withContentWrapper {
 	padding: 20px !important;
  }
+ 
 
 /*FIX: issue #14 reported by @0belous | better-jellyfin-ui/issues/14*/
  /*see plugin #10*/
@@ -1896,7 +1908,7 @@ box-shadow: none !important;
   box-shadow: none !important;
 }
 .paper-icon-button-light::before{
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(var(--smallui-frosted));
 }
 ================================================================================================================
 2.HIGH CONTRAST - DISABILITY 
@@ -1906,7 +1918,7 @@ box-shadow: none !important;
 }
   .dialog {
   background-color: #101010ab;
-  backdrop-filter: invert(1) blur(10px) !important;
+  backdrop-filter: invert(1) blur(var(--smallui-frosted)) !important;
 }
   [dir="ltr"] .navMenuOption{
   background: #f0f8ff38 !important; 
@@ -1930,7 +1942,7 @@ box-shadow: none !important;
   }
 }
 =========================================================================================================================
-4. CHANGE COLOR PREFERENCE
+4. CHANGE COLOR PREFERENCE (only color see https://github.com/tromoSM/better-jellyfin-ui/blob/main/options/Change-color-preference.css for new version )
 =========================================================================================================================
 :root{
   --card-indicate-bg:rgba(255, 169, 184, 0.534);
@@ -1939,6 +1951,7 @@ box-shadow: none !important;
   --card-indicate-icon-fill:#ffb0d9;
   --background-glow-color:#240000;
 }
+
 =========================================================================================================================
 5.FLOATING HEADER
 =========================================================================================================================
