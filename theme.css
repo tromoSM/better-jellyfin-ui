@@ -26,11 +26,11 @@ all id start with "youtube-preview" yt iframe style contrainer inside -> video r
   
   /*Blur value - requested by @Aceman67*/
 
-  --extra-frosted:50px; /*extra frosted ui: panels,headers etc*/
+  --extra-frosted:50px;  /*extra frosted ui: panels,headers etc*/
   --medium-frosted:20px;
-  --largeui-frosted:15px;/*mostly used by large ui*/
-  --smallui-frosted:10px;/*mostly used by smaller ui*/
-  --lite-frosted:5px;/*also used by card animation*/
+  --largeui-frosted:15px; /*mostly used by large ui*/
+  --smallui-frosted:10px; /*mostly used by smaller ui*/
+  --lite-frosted:5px; /*also used by card animation*/
   --extrathin-frostlayer:2px;
 }
 :root{
@@ -39,7 +39,7 @@ all id start with "youtube-preview" yt iframe style contrainer inside -> video r
 .skinHeader-withBackground {
   background-color: #00000054;
   backdrop-filter: blur(var(--extra-frosted));
-  -webkit-backdrop-filter: blur(50px);
+  -webkit-backdrop-filter: blur(var(--extra-frosted));
 }
 .emby-tabs-slider {
   position: fixed;
