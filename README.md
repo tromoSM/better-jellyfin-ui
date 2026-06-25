@@ -196,6 +196,14 @@ https://github.com/user-attachments/assets/56181924-8a25-4a21-b272-642b82cead16
   /*Backdrop image styling*/
   --backdrop-bg-color:rgba(0, 0, 0, 0.87);
   --backdrop-filter:blur(20px) saturate(120%) contrast(120%) brightness(110%);
+
+  /*Blur value - requested by @Aceman67*/
+  --extra-frosted:50px; /*extra frosted ui: panels,headers etc*/
+  --medium-frosted:20px;
+  --largeui-frosted:15px;/*mostly used by large ui*/
+  --smallui-frosted:10px;/*mostly used by smaller ui*/
+  --lite-frosted:5px;/*also used by card animation*/
+  --extrathin-frostlayer:2px;
 }
   ```
 </details>
