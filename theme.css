@@ -3,10 +3,8 @@ Licensed under Apache 2.0
 © 2026 - tromoSM. All right reserved.
 tromoSM/better-jellyfin-ui
 
-version 1.16 release 17
+version 1.17 release 18
 see changelog.md for changes
-
-all id start with "youtube-preview" yt iframe style contrainer inside -> video root iframe yt trailer shit add scale in. start with blur
 */ 
 @font-face {
   font-family: Inter;
@@ -1844,6 +1842,12 @@ border-left-color: white !important;
 	border-radius: 51px;
 }
 
+/*header extrapadding  */
+.withSectionTabs .headerTop {
+	padding-bottom: 0px;
+}
+/**/
+
 /*REQUESTS FROM USERS*/
 
 /*#1 by @Cryborg12 (backdrop background)*/
@@ -1887,7 +1891,12 @@ border-left-color: white !important;
  .listItem.listItem-largeImage.listItem-withContentWrapper {
 	padding: 20px !important;
  }
- 
+
+/*FIX: issue #feedback/requests_2 (reporter chose to be anonymous)  from [tromosm.gt.tc/?utm_source=jellysource&feedback=true]*/
+
+body:has(.videoPlayerContainer) .skinHeader {
+	height: fit-content !important;
+}
 
 /*FIX: issue #14 reported by @0belous | better-jellyfin-ui/issues/14*/
  /*see plugin #10*/
@@ -1969,6 +1978,11 @@ box-shadow: none !important;
   background: #f0f8ff05;
   border-radius: 50px;
 }
+
+body:has(.videoPlayerContainer) .skinHeader{
+	backdrop-filter: blur(8px) !important;
+}
+
 ===========================================================================================================================
 6.ALTERNATIVE NAVIGATION BAR
 ============================================================================================================================
