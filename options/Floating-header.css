@@ -8,3 +8,7 @@
   background: #f0f8ff05;
   border-radius: 50px;
 }
+
+body:has(.videoPlayerContainer) .skinHeader{
+	backdrop-filter: blur(8px) !important;
+}
