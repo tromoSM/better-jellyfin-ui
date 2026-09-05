@@ -6,6 +6,8 @@ A modern UI enhancement theme for Jellyfin focused on cleaner layout, smoother a
 
 ---
 [![](https://data.jsdelivr.com/v1/package/gh/tromoSM/better-jellyfin-ui/badge?style=rounded)](https://www.jsdelivr.com/package/gh/tromoSM/better-jellyfin-ui)
+[![](https://img.shields.io/jsdelivr/gh/hy/tromosm/better-jellyfin-ui?style=flat&label=jsDelivr&color=f25a30)](https://www.jsdelivr.com/package/gh/tromoSM/better-jellyfin-ui)
+
 ## Installation
 
 Go to:
