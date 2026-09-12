@@ -1,0 +1,27 @@
+
+@keyframes toggle{
+  from,to{
+  	transform: translateX(-3px) scale(1);
+  }
+  50%{
+  background: #ffffffb2;
+  backdrop-filter: blur(3px);
+  box-shadow: 2px 3px 2px -3.2px rgb(9, 255, 36) inset, -2px -2px 1px -2px rgba(31, 255, 35, 0.84) inset, 0px 0px 15px rgba(0, 0, 0, 0.24);
+  	transform: translateX(-3px) scale(1.5);
+  }
+}
+@keyframes toggleX{
+  from,to{
+  	transform: translateX(-3px) scale(1);
+  }
+  50%{
+  background: #ffffffb2;
+  backdrop-filter: blur(3px);
+  box-shadow: 2px 3px 2px -3.2px rgb(9, 255, 36) inset, -2px -2px 1px -2px rgba(31, 255, 35, 0.84) inset, 0px 0px 15px rgba(0, 0, 0, 0.24);
+  	transform: translateX(-3px) scale(1.4);
+  }
+}
+  
+.MuiSwitch-track.css-7m1v5o,.css-1fmeo47.Mui-checked + .MuiSwitch-track, .css-7m1v5o{ 
+	background: #34c759 !important;
+}
