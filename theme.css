@@ -3,7 +3,7 @@ Licensed under Apache 2.0
 © 2026 - tromoSM. All right reserved.
 tromoSM/better-jellyfin-ui
 
-version 1.17 release 18
+version 1.18 release 19
 see changelog.md for changes
 */ 
 @font-face {
@@ -34,7 +34,7 @@ see changelog.md for changes
 :root{
   --jf-palette-primary-main:white;
 }
-.skinHeader-withBackground {
+.skinHeader-withBackground,.MuiPaper-root.MuiPaper-elevation{
   background-color: #00000054;
   backdrop-filter: blur(var(--extra-frosted));
   -webkit-backdrop-filter: blur(var(--extra-frosted));
@@ -563,8 +563,8 @@ html{
   border-radius: 10px !important; 
 }
 
-.playstatebutton-icon-played,.ratingbutton-icon-withrating{
-  color: var(--card-indicate-icon-fill);
+.playstatebutton-icon-played,.ratingbutton-icon-withrating,.css-w4sgop{
+  color: var(--card-indicate-icon-fill) !important;
 }
 [dir="ltr"] .cardOverlayButton-br button span{
 transition: 0.2s;
@@ -784,7 +784,8 @@ z-index: -1;
   transform: translateX(-50%) translateY(50px) !important;
 }
 /*Mobile styling ahh begin*/
-.cardOverlayButton.cardOverlayButton-hover.itemAction.paper-icon-button-light.emby-button.ratingbutton-withrating,.cardOverlayButton.cardOverlayButton-hover.itemAction.paper-icon-button-light.emby-button.playstatebutton-played{
+.cardOverlayButton.cardOverlayButton-hover.itemAction.paper-icon-button-light.emby-button.ratingbutton-withrating,.cardOverlayButton.cardOverlayButton-hover.itemAction.paper-icon-button-light.emby-button.playstatebutton-played,
+.MuiButtonBase-root.MuiIconButton-root.paper-icon-button-light.cardOverlayButton:has([data-testid="FavoriteIcon"],[data-testid="CheckIcon"]):has(.MuiSvgIcon-root.MuiSvgIcon-colorError.MuiSvgIcon-fontSizeMedium.css-w4sgop){
   background: #ffa5f521;
   box-shadow: 3px 2px 2px -3px var(--card-indicate-liquid-glass) inset, -2px -2px 2px -2px var(--card-indicate-liquid-glass)  inset, 0px 0px 10px var(--card-indicate-shadow);
   backdrop-filter: blur(var(--smallui-frosted));
@@ -831,7 +832,8 @@ z-index: -1;
 }
 /*mobile style end*/
 /*ani*/
-.cardOverlayButton.cardOverlayButton-hover.itemAction.paper-icon-button-light.emby-button.ratingbutton-withrating::before,.cardOverlayButton.cardOverlayButton-hover.itemAction.paper-icon-button-light.emby-button.playstatebutton-played::before{
+.cardOverlayButton.cardOverlayButton-hover.itemAction.paper-icon-button-light.emby-button.ratingbutton-withrating::before,.cardOverlayButton.cardOverlayButton-hover.itemAction.paper-icon-button-light.emby-button.playstatebutton-played::before,
+.MuiButtonBase-root.MuiIconButton-root.paper-icon-button-light.cardOverlayButton:has(.MuiSvgIcon-root.MuiSvgIcon-colorError.MuiSvgIcon-fontSizeMedium.css-w4sgop)::before{
   animation: yogurt 0.5s 1 forwards;
   width: 100%;
   height: 100%;
@@ -840,7 +842,7 @@ z-index: -1;
   left: 50%;
   top: 50%;
   transform: translateX(-50%) translateY(-50%);
-  background-color: var(--card-indicate-bg);
+  background-color: var(--card-indicate-bg) !important;
 }
 @keyframes yogurt{
   from{
@@ -1743,7 +1745,7 @@ border-left-color: white !important;
 	margin: 0;
 	box-shadow: 2px 2px 3px -4px rgba(255, 255, 255, 0.4) inset, -2px -2px 2px -4px rgb(255, 255, 255) inset, 0px 0px 15px rgba(0, 0, 0, 0);
 }
-.cardOverlayContainer:hover .cardOverlayButton-br.flex {
+.cardOverlayContainer:hover .cardOverlayButton-br.flex,.cardScalable:hover .cardOverlayButton-br.flex{
   transform: none;
   opacity: 1;
 }
@@ -1841,12 +1843,512 @@ border-left-color: white !important;
 	padding: 2px;
 	border-radius: 51px;
 }
-
+/*117 */
 /*header extrapadding  */
 .withSectionTabs .headerTop {
 	padding-bottom: 0px;
 }
-/**/
+
+/*118 - support for jellyfin v12 ui*/
+
+  /*header area*/
+header .MuiButtonBase-root.MuiButton-text {
+	background: transparent;
+	transition: 0.2s !important;
+	overflow: hidden;
+	border-radius: 0px !important;
+  margin: 0px;
+	/* box-shadow: 3px 2px 2px -3px rgba(255, 255, 255, 0) inset, -2px -2px 2px -3px rgba(255, 255, 255, 0) inset, 0px 0px 15px rgba(0, 0, 0, 0.329); */
+}
+/* header .MuiButtonBase-root.MuiButton-text:hover {
+	box-shadow: 3px 2px 2px -3px rgba(255, 255, 255, 0.24) inset, -2px -2px 2px -3px rgba(255, 255, 255, 0.4) inset, 0px 0px 15px rgba(0, 0, 0, 0.329);
+	background: #ffffff05;
+} */
+header .MuiButtonBase-root.MuiButton-textPrimary {
+	/* background: #ffffff0f !important; */
+	width: fit-content !important;
+	transition: 0.1s !important;
+  background: transparent !important;
+	/* padding: 0px 12px; */
+  padding: 0px 20px;
+  box-shadow: none !important;
+	/* box-shadow: 3px 2px 2px -3px rgba(255, 255, 255, 0.32) inset, -2px -2px 2px -3px rgba(255, 255, 255, 0.39) inset, 0px 0px 15px rgba(0, 0, 0, 0.329) !important; */
+}
+header .MuiButtonBase-root.MuiButton-text:active {
+	/* transform: scale(1.1); */
+  transition: 0.2s cubic-bezier(0.075, 0.82, 0.165, 1) !important;
+	/* background: #ffffff17 !important; */
+}
+header .MuiButtonBase-root .css-4mb1j7 {
+	/* width: 115% !important; */
+	/* height: 115% !important; */
+	/* filter: blur(15px) !important; */
+  opacity: 0;
+}
+header .MuiButtonBase-root.MuiButton-text:first-child .css-4mb1j7{
+	width: 115% !important;
+	height: 115% !important;
+	filter: blur(15px) !important;
+  opacity: 1;
+}
+header .MuiButtonBase-root.MuiButton-text:first-child:not(.MuiToolbar-root.MuiToolbar-gutters.MuiToolbar-dense.padded-left.padded-right.css-133e01t *) {
+	border-radius: 50px !important;
+	box-sizing: border-box;
+}
+.MuiPaper-root.MuiPaper-elevation.MuiPaper-elevation1 {/*activeheader*/
+	padding: 8px 0px;
+}
+.MuiPaper-root.MuiPaper-elevation.MuiPaper-elevation0 {
+	padding: 3px 0px;
+}
+.MuiPaper-root.MuiPaper-elevation{ /*commonstate*/
+  transition: 0.2s;
+}
+header .MuiButtonBase-root.MuiButton-text:not(.MuiButtonBase-root.MuiButton-root.MuiButton-text.MuiButton-textInherit.MuiButton-sizeLarge.MuiButton-textSizeLarge.MuiButton-colorInherit.css-iqm7ky)::before {
+	background: #ffffff0a;
+	width: 100%;
+	height: 100%;
+	content: '';
+	position: absolute;
+	z-index: -1;
+	border-radius: 0px;
+}
+header .MuiButtonBase-root.MuiButton-text:not(.MuiButtonBase-root.MuiButton-root.MuiButton-text.MuiButton-textInherit.MuiButton-sizeLarge.MuiButton-textSizeLarge.MuiButton-colorInherit.css-iqm7ky):not(.MuiToolbar-root.MuiToolbar-gutters.MuiToolbar-dense.padded-left.padded-right.css-133e01t *):nth-child(2):before{
+  /*left */
+	border-radius: 50px 0px 0px 50px;
+  box-shadow: 3px 2px 2px -4px rgb(255, 255, 255) inset; 
+}
+header .MuiButtonBase-root.MuiButton-text:not(.MuiButtonBase-root.MuiButton-root.MuiButton-text.MuiButton-textInherit.MuiButton-sizeLarge.MuiButton-textSizeLarge.MuiButton-colorInherit.css-iqm7ky):not(.MuiToolbar-root.MuiToolbar-gutters.MuiToolbar-dense.padded-left.padded-right.css-133e01t *):last-child:before{
+  border-radius: 0px 50px 50px 0px;
+  box-shadow: -3px -2px 2px -4px rgba(255, 255, 255, 0.5) inset;
+}
+header .MuiButtonBase-root.MuiButton-text:not(.MuiButtonBase-root.MuiButton-root.MuiButton-text.MuiButton-textInherit.MuiButton-sizeLarge.MuiButton-textSizeLarge.MuiButton-colorInherit.css-iqm7ky)::after {
+	position: absolute;
+	width: 100%;
+	background: transparent;
+	height: 95%;
+	content: '';
+  opacity: 0;
+	z-index: -1;
+	border-radius: 50px;
+	transform: scale(0.9);
+  transition: 0.2s;
+}
+
+@keyframes selection{
+    from,to{transform: scale(0.9);}
+    30%{transform: scale(1);filter: brightness(1.5);}
+    60%{transform: scale(0.8);filter: brightness(1);}
+}
+header .MuiButtonBase-root.MuiButton-text:not(.MuiButtonBase-root.MuiButton-root.MuiButton-text.MuiButton-textInherit.MuiButton-sizeLarge.MuiButton-textSizeLarge.MuiButton-colorInherit.css-iqm7ky,.MuiButtonBase-root.MuiButton-textPrimary,
+.MuiButton-text:not(.MuiButtonBase-root.MuiButton-root.MuiButton-text.MuiButton-textInherit.MuiButton-sizeLarge.MuiButton-textSizeLarge.MuiButton-colorInherit.css-iqm7ky):nth-child(2),.MuiButton-text:not(.MuiButton-text:first-child):last-child)::after{
+  width: 111%;
+}
+header .MuiButtonBase-root.MuiButton-text:not(.MuiButtonBase-root.MuiButton-root.MuiButton-text.MuiButton-textInherit.MuiButton-sizeLarge.MuiButton-textSizeLarge.MuiButton-colorInherit.css-iqm7ky):hover::after{
+  opacity: 1;
+	background: #ffffff11;
+}
+header .MuiButtonBase-root.MuiButton-textPrimary:not(.MuiButtonBase-root.MuiButton-root.MuiButton-text.MuiButton-textInherit.MuiButton-sizeLarge.MuiButton-textSizeLarge.MuiButton-colorInherit.css-iqm7ky)::after{
+	background: #ffffff1c;
+  opacity: 1;
+  animation: selection 0.5s;
+  box-shadow: 3px 2px 2px -3px rgba(255, 255, 255, 0.21) inset, -2px -2px 2px -3px rgba(255, 255, 255, 0.87) inset, 0px 0px 15px rgba(0, 0, 0, 0.16);
+}
+
+header .MuiButtonBase-root.MuiButton-textPrimary:not(.MuiButtonBase-root.MuiButton-root.MuiButton-text.MuiButton-textInherit.MuiButton-sizeLarge.MuiButton-textSizeLarge.MuiButton-colorInherit.css-iqm7ky):hover::after{
+	background: #ffffff27;
+}
+header .MuiButtonBase-root.MuiButton-textPrimary:not(.MuiButtonBase-root.MuiButton-root.MuiButton-text.MuiButton-textInherit.MuiButton-sizeLarge.MuiButton-textSizeLarge.MuiButton-colorInherit.css-iqm7ky):active::after{
+	background: #ffffff27;
+  transform: scale(1);
+}
+.MuiBox-root.css-1riowxi {
+	gap: 5px;
+	margin-right: 5px;
+}
+#indexPage {
+	padding-top: 25px !important;
+}
+.MuiButtonBase-root.MuiIconButton-root{
+  position: relative;
+}
+header .MuiButtonBase-root.MuiIconButton-root{
+  width: 38px;
+	height: 38px;
+  transition: 0.2s;
+}
+@keyframes headerbuttonani{
+  from,to{
+    transform: inherit;
+  }
+  50%{
+    transform: scale(0.9);
+  }
+}
+header .MuiButtonBase-root.MuiIconButton-root:not(:active){
+  animation: headerbuttonani 0.5s;
+}
+header .MuiButtonBase-root.MuiIconButton-root:active{
+  transform: scale(1.1);
+}
+.MuiButtonBase-root.MuiIconButton-root::after {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	border-radius: 50px;
+	z-index: -1;
+	background: rgba(255, 255, 255, 0.06);
+	box-shadow: 2px 2px 2px -3.8px rgb(255, 255, 255) inset, -2px -2px 2px -3.8px rgba(255, 255, 255, 0.61) inset, 0px 0px 15px rgba(0, 0, 0, 0.13);
+	content: '';
+}
+.MuiChip-root.MuiChip-filled.MuiChip-filledDefault {
+	background: #ffffff24;
+}
+.MuiButtonGroup-root.MuiButtonGroup-contained {
+	box-shadow: none;
+}
+.MuiButtonGroup-root.MuiButtonGroup-text.MuiButtonGroup-horizontal.css-boo9v6 {
+	background: #ffffff05;
+	border-radius: 50px;
+}
+div.MuiButtonGroup-root:not(.MuiButtonGroup-root:first-child,.cardOverlayButton-br) > button:nth-child(1) {
+	border-radius: 50px 0px 0px 50px !important;
+  box-shadow: 3px 2px 2px -4px rgb(255, 255, 255) inset; 
+}
+div.MuiButtonGroup-root:not(.MuiButtonGroup-root:first-child,.cardOverlayButton-br) > button:last-child{
+  border-radius: 0px 50px 50px 0px !important;
+  box-shadow: -3px -2px 2px -4px rgba(255, 255, 255, 0.5) inset;
+}
+  /*header toolbar button popup context*/
+.MuiPaper-root.MuiPaper-elevation.MuiPaper-rounded.MuiPaper-elevation8.MuiPopover-paper.css-1v2vhpl {
+	border-radius: 23px;
+	scrollbar-width: none;
+	width: 220px !important;
+	box-shadow: 2px 2px 2px -3.8px rgb(255, 255, 255) inset, -2px -2px 2px -3.8px rgba(255, 255, 255, 0.84) inset, 0px 0px 15px rgba(0, 0, 0, 0.24);
+	background: transparent;
+	backdrop-filter: blur(24px);
+  padding: 6px;
+}
+.MuiPaper-root.MuiPaper-elevation.MuiPaper-elevation0.MuiAccordion-root.css-ecgo44 {
+	background: transparent;
+	border: none;
+}
+.MuiPaper-root.MuiPaper-elevation.MuiPaper-rounded.MuiPaper-elevation8.MuiPopover-paper.css-1v2vhpl button:not(.MuiButtonBase-root.MuiButton-root.MuiButton-text.MuiButton-textInherit.MuiButton-sizeMedium.MuiButton-textSizeMedium.MuiButton-colorInherit.MuiButton-fullWidth.MuiButtonGroup-grouped.MuiButtonGroup-groupedHorizontal.MuiButtonGroup-groupedText.MuiButtonGroup-groupedTextHorizontal.MuiButtonGroup-groupedTextInherit.MuiButtonGroup-firstButton.css-1u6en01){
+	padding: 0px 10px;
+	min-height: 5px !important;
+	height: 37px;
+	border-radius: 19px;
+	width: 99%;
+}
+.MuiAccordionDetails-root.css-m6ttso {
+	background: #ffffff08;
+	border-radius: 16px;
+	margin: 3px 0px;
+	padding: 3px 15px;
+}
+.MuiButtonBase-root.MuiCheckbox-root.MuiCheckbox-colorPrimary {
+	overflow: hidden;
+	transition: 0.2s;
+}
+.MuiButtonBase-root.MuiButton-root.MuiButton-text.MuiButton-textInherit.MuiButton-sizeMedium.MuiButton-textSizeMedium.MuiButton-colorInherit.MuiButton-fullWidth.MuiButtonGroup-grouped.MuiButtonGroup-groupedHorizontal.MuiButtonGroup-groupedText.MuiButtonGroup-groupedTextHorizontal.MuiButtonGroup-groupedTextInherit.MuiButtonGroup-firstButton.css-1u6en01 {
+	width: 100%;
+	text-align: center;
+	background: #ff7e7e26;
+	display: flex;
+	justify-content: center;
+	border-radius: 50px;
+  overflow: hidden;
+	margin-top: 9px;
+	box-shadow: 2px 2px 2px -3.8px rgb(255, 182, 182) inset, -2px -2px 2px -3.8px rgba(255, 216, 216, 0.84) inset, 0px 0px 15px rgba(0, 0, 0, 0.24);
+}
+.MuiButtonBase-root.MuiButton-root.MuiButton-text.MuiButton-textInherit.MuiButton-sizeMedium.MuiButton-textSizeMedium.MuiButton-colorInherit.MuiButton-fullWidth.MuiButtonGroup-grouped.MuiButtonGroup-groupedHorizontal.MuiButtonGroup-groupedText.MuiButtonGroup-groupedTextHorizontal.MuiButtonGroup-groupedTextInherit.MuiButtonGroup-firstButton.css-1u6en01:active {
+	background: #ff505047;
+	transform: scale(1.05);
+}
+.MuiBadge-badge.MuiBadge-dot.MuiBadge-anchorOriginTopRight.MuiBadge-anchorOriginTopRightRectangular.MuiBadge-overlapRectangular.MuiBadge-colorInfo.css-9d5tf5 {
+	background: #ffffff2b;
+	box-shadow: 2px 2px 2px -3.5px rgb(255, 255, 255) inset, -2px -2px 2px -3.8px rgba(255, 255, 255, 0.84) inset, 0px 0px 15px rgba(0, 0, 0, 0.24);
+}
+.MuiButtonBase-root.MuiButton-root.MuiButton-contained.MuiButton-containedPrimary.MuiButton-sizeMedium.MuiButton-containedSizeMedium.MuiButton-colorPrimary.MuiButtonGroup-grouped.MuiButtonGroup-groupedHorizontal.MuiButtonGroup-groupedContained.MuiButtonGroup-groupedContainedHorizontal.MuiButtonGroup-groupedContainedPrimary.MuiButtonGroup-firstButton.css-au9l87 {
+	border-color: #b8b3b3;
+}
+.MuiButtonBase-root.MuiMenuItem-root.MuiMenuItem-gutters.css-mbeig7 {
+	border-radius: 31px;
+	transition: 0.1s;
+	background: #ffffff05;
+	width: 100%;
+	margin-bottom: 4px;
+}
+.MuiButtonBase-root.MuiIconButton-root.MuiIconButton-sizeSmall.css-1g4njem {
+	width: 38px !important;
+	height: 38px;
+	margin: 0px;
+}
+.MuiButtonBase-root.MuiIconButton-root.MuiIconButton-sizeSmall.css-1g4njem:active {
+	transform: scale(1.07);
+}
+.MuiList-root.MuiList-padding.MuiList-dense.MuiList-subheader.css-q9gyaw {
+	background: #ffffff08;
+	border-radius: 21px;
+  margin-top: 5px;
+	overflow: hidden;
+	box-shadow: 0px 0px 10px #0000001c;
+}
+.MuiButtonBase-root.MuiMenuItem-root.MuiMenuItem-gutters.css-1ay4u8n {
+	background: #00000017;
+	border-radius: 50px;
+	margin-top: 2px;
+	width: 96%;
+	margin-left: 2%;
+	overflow: hidden;
+}
+.css-1ay4u8n .MuiSvgIcon-root.MuiSvgIcon-fontSizeSmall.css-1pi2lzz {
+  animation: liquidin 0.5s forwards;
+  opacity: 0;
+}
+@keyframes liquidin{
+  from{
+    opacity: 0;
+    transform: scale(0);
+  }
+  50%{
+    transform: scale(1.1);
+    opacity: 1;
+  }
+  to{
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+.MuiSwitch-root.MuiSwitch-sizeSmall.css-1pwinck {
+	height: 34px;
+	width: 58px;
+	display: flex;
+	position: relative;
+}
+.MuiButtonBase-root.MuiSwitch-switchBase.MuiSwitch-colorPrimary.PrivateSwitchBase-root.css-1fmeo47 {
+	padding: 9px 9px;
+	right: 13px;
+}
+.MuiSwitch-thumb.css-65bv5r{
+  transform: translateX(-2px);
+}
+@keyframes toggle{
+  from,to{
+  	transform: translateX(-2px) scale(1);
+  }
+  50%{
+  background: #ffffff42;
+  backdrop-filter: blur(3px);
+  box-shadow: 2px 3px 2px -3.2px rgb(253, 253, 253) inset, -2px -2px 1px -2px rgba(255, 255, 255, 0.84) inset, 0px 0px 15px rgba(0, 0, 0, 0.24);
+  	transform: translateX(-2px) scale(1.5);
+  }
+}
+@keyframes toggleX{
+  from,to{
+  	transform: translateX(-2px) scale(1);
+  }
+  50%{
+  background: #ffffff4b;
+  backdrop-filter: blur(3px);
+  box-shadow: 2px 3px 2px -3.2px rgb(250, 250, 250) inset, -2px -2px 1px -2px rgba(253, 253, 253, 0.84) inset, 0px 0px 15px rgba(0, 0, 0, 0.24);
+  	transform: translateX(-2px) scale(1.4);
+  }
+}
+.MuiSwitch-root.MuiSwitch-sizeSmall.css-1pwinck {
+	overflow: visible;
+}
+.MuiButtonBase-root.MuiSwitch-switchBase .MuiTouchRipple-root {
+	opacity: 0;
+}
+.MuiSwitch-track.css-7m1v5o,.css-1fmeo47.Mui-checked + .MuiSwitch-track, .css-7m1v5o{ 
+  /*togglehead */
+	background: rgba(255, 255, 255, 0.13) !important;
+	opacity: 1;
+	border-radius: 50px;
+  box-shadow: rgb(255, 255, 255) 2px 2px 2px -3.6px inset, rgba(255, 255, 255, 0.61) -2px -2px 2px -3.6px inset, rgba(0, 0, 0, 0.33) 0px 0px 15px;
+}
+
+.MuiButtonBase-root.MuiSwitch-switchBase.MuiSwitch-colorPrimary.PrivateSwitchBase-root.css-1fmeo47:hover {
+	background: transparent;
+}
+.MuiButtonBase-root.MuiSwitch-switchBase.MuiSwitch-colorPrimary.PrivateSwitchBase-root.css-1fmeo47:not(:has(input:checked)) .MuiSwitch-thumb {
+	/* transform: translateX(-3px); */
+  animation: toggleX 0.3s;
+}
+.MuiButtonBase-root.MuiSwitch-switchBase.MuiSwitch-colorPrimary.PrivateSwitchBase-root.css-1fmeo47:has(input:checked) .MuiSwitch-thumb {
+	/* transform: translateX(-3px); */
+  animation: toggle 0.3s;
+} 
+.MuiDivider-root.MuiDivider-fullWidth.css-14093q0 {
+	opacity: 0.4;
+	margin-top: 7px;
+}
+.MuiCollapse-root.MuiCollapse-vertical.MuiCollapse-entered.css-1cbf1l2 {
+	margin-bottom: 8px;
+}
+.MuiSwitch-thumb.css-65bv5r {
+	width: 24px;
+	border-radius: 50px;
+}
+.MuiButtonBase-root.MuiButton-root.MuiButton-sizeLarge.MuiButton-textSizeLarge {
+	border-radius: 50px !important;
+}
+.MuiPaper-root.MuiPaper-elevation.MuiPaper-rounded.MuiPaper-elevation8.MuiPopover-paper.MuiMenu-paper {
+	padding: 0px 8px;
+	border-radius: 26px;
+	box-shadow: 2px 2px 2px -3.7px rgb(255, 255, 255) inset, -2px -2px 2px -3.7px rgba(255, 255, 255, 0.61) inset, 0px 0px 15px rgba(0, 0, 0, 0.329);
+}
+.material-icons.indicatorIcon.check,
+.mediaSourceIndicator,.countIndicator.indicator,
+.cardIndicators *,
+.selectionCommandsPanel,.btnCloseSelectionPanel.autoSize.paper-icon-button-light,
+.btnSelectionPanelOptions.autoSize.paper-icon-button-light
+{
+	color: white;
+}
+.MuiButtonBase-root.MuiMenuItem-root.MuiMenuItem-gutters.css-mbeig7 {
+	background: #ffffff0a;
+}
+.MuiPaper-root.MuiPaper-elevation.MuiPaper-rounded.MuiPaper-elevation8.MuiPopover-paper.MuiMenu-paper.css-18bruhv {
+	padding: 3px 8px;
+	border-radius: 26px;
+}
+.MuiPaper-root.MuiPaper-elevation.MuiPaper-rounded.MuiPaper-elevation8.MuiPopover-paper.MuiMenu-paper.css-18bruhv {
+	padding: 3px 8px;
+	border-radius: 26px;
+	box-shadow: 2px 2px 2px -3.6px rgb(255, 255, 255) inset, -2px -2px 2px -3.6px rgb(255, 255, 255) inset, 0px 0px 15px rgba(0, 0, 0, 0.329);
+}
+.MuiDivider-root.MuiDivider-fullWidth.css-14093q0 {
+	opacity: 0.3;
+}
+.MuiButtonBase-root.MuiButton-root.MuiButton-text.MuiButton-textInherit.MuiButton-sizeLarge.MuiButton-textSizeLarge.MuiButton-colorInherit.css-iqm7ky {
+	font-family: Inter;
+}
+.MuiBox-root #liveTvPage{
+	margin-top: 25px;
+}
+.MuiButtonBase-root.MuiButton-root.MuiButton-text.MuiButton-textInherit.MuiButton-sizeLarge.MuiButton-textSizeLarge.MuiButton-colorInherit.css-iqm7ky {
+	margin-right: 10px;
+}
+.MuiButtonGroup-root.MuiButtonGroup-horizontal.cardOverlayButton-br.flex.css-xsgcp5 {
+	height: 33px;
+}
+.MuiButtonBase-root.MuiIconButton-root.paper-icon-button-light.cardOverlayButton {
+	border-radius: 50px !important;
+  overflow: hidden;
+}
+.MuiButtonBase-root.MuiIconButton-root.MuiIconButton-sizeMedium.paper-icon-button-light.cardOverlayButton.cardOverlayButton-hover.itemAction.css-mk0p0t,
+.MuiButtonBase-root.MuiIconButton-root.paper-icon-button-light.cardOverlayButton:has(.MuiSvgIcon-root.MuiSvgIcon-colorError.MuiSvgIcon-fontSizeMedium.css-w4sgop)::before
+{
+	backdrop-filter: blur(10px);
+}
+.MuiButtonBase-root.MuiIconButton-root.paper-icon-button-light.cardOverlayButton:has(.MuiSvgIcon-root.MuiSvgIcon-colorError.MuiSvgIcon-fontSizeMedium.css-w4sgop)::before{
+  z-index: -1;
+}
+.MuiButtonBase-root.MuiIconButton-root.paper-icon-button-light.cardOverlayButton:has([data-testid="FavoriteIcon"])::before{
+ background-color: aqua;
+}
+.MuiButtonBase-root.MuiIconButton-root.paper-icon-button-light.cardOverlayButton svg.MuiSvgIcon-root {
+	color: white;
+}
+.MuiButtonBase-root.MuiIconButton-root.paper-icon-button-light.cardOverlayButton svg.MuiSvgIcon-root {
+	color: white;
+	filter: drop-shadow(0px 0px 10px #0000008c);
+}
+.selectionCommandsPanel .paper-icon-button-light:not(:disabled):focus, .selectionCommandsPanel .paper-icon-button-light:not(:disabled):hover {
+	background: #ffffff0d;
+}
+.cardScalable:hover .cardOverlayContainer, .cardScalable:hover .cardOverlayFab-primary {
+	opacity: 1;
+	scale: 1;
+}
+.MuiButtonBase-root.MuiIconButton-root.MuiIconButton-colorInherit.MuiIconButton-sizeLarge.css-i2hxb6 {
+	padding: 8px;
+	transition: 0.2s;
+	overflow: hidden;
+}
+.MuiButtonBase-root.MuiIconButton-root.MuiIconButton-colorInherit.MuiIconButton-sizeLarge.css-i2hxb6 {
+	padding: 8px;
+	transition: 0.2s;
+	overflow: hidden;
+}
+ /*118-jellycommonui */
+.selectionCommandsPanel {
+	z-index: +99999999999;
+	border-radius: 50px;
+	margin: 10px;
+	box-shadow: 0px 0px 10px #00000080;
+}
+.innerCardFooter {
+	background: transparent;
+	backdrop-filter: blur(8px);
+	border-radius: 50px;
+	font-size: 12px;
+	margin: 5px;
+	text-shadow: 0px 0px 10px #0000009e;
+}
+#searchTextInput {
+	background: #ffffff12;
+	border-radius: 50px;
+	padding: 12px 16px;
+	box-shadow: 2px 2px 2px -3.5px rgb(255, 255, 255) inset, -2px -2px 2px -3.5px rgba(255, 255, 255, 0.61) inset, 0px 0px 15px rgba(0, 0, 0, 0.329);
+}
+.searchSuggestionsList.padded-left.padded-right {
+	background: #ffffff0f !important;
+	border-radius: 34px !important;
+  padding: 8px !important;
+}
+.searchSuggestionsList.padded-left.padded-right div {
+	background: #ffffff0a;
+	border-radius: 50px;
+	margin: 3px 0px;
+}
+
+.emby-tabs-slider.guideDateTabsSlider {
+	border-radius: 50px;
+	padding: 3px 0px;
+	width: fit-content;
+	margin: 0px;
+	box-shadow: 2px 2px 1px -3.8px rgba(255, 255, 255, 0.82) inset, -2px -2px 1px -3.8px rgb(255, 255, 255) inset, 0px 0px 15px rgba(0, 0, 0, 0);
+}
+.emby-tab-button.guide-date-tab-button.emby-tab-button-active.emby-button,
+.emby-tab-button.guide-date-tab-button.emby-button{
+  transition: 0.2s;
+	border-radius: 50px;
+	padding: 3px 13px !important;
+}
+@keyframes selectemby{
+  from,to{
+    transform: scale(1);
+  }
+  20%{
+    transform: scale(0.9);
+  }
+  60%{
+    transform: scale(1.2);
+  }
+}
+.emby-tab-button.guide-date-tab-button.emby-tab-button-active.emby-button{
+  background: #ffffff12;
+  box-shadow: 2px 2px 1px -3.8px rgb(255, 255, 255) inset, -2px -2px 0.9px -3.8px rgb(255, 255, 255) inset, 0px 0px 15px rgba(0, 0, 0, 0);
+  animation: selectemby 0.5s;
+}
+.emby-tab-button.guide-date-tab-button.emby-button:hover{background: #ffffff08;}
+.emby-tab-button.guide-date-tab-button.emby-button .emby-button-foreground::before{
+  display: none !important;
+}
+.guide-headerTimeslots {
+	margin: 42px 30px 5px 30px;
+	border-radius: 50px;
+}
+.mediaInfoItem.mediaInfoText.mediaInfoOfficialRating {
+	border: none;
+	border-radius: 50px;
+}
+
+
+
 
 /*REQUESTS FROM USERS*/
 
@@ -1929,11 +2431,11 @@ box-shadow: none !important;
 .cardOverlayButtonIcon-hover {
   background: rgba(0,0,0,.7) !important;
 }
-  .dialog {
+  .dialog,.MuiPopover-paper{
   background-color: #101010ab;
   backdrop-filter: invert(1) blur(var(--smallui-frosted)) !important;
 }
-  [dir="ltr"] .navMenuOption{
+  [dir="ltr"] .navMenuOption,.MuiMenuItem-root{
   background: #f0f8ff38 !important; 
 }
 ===================================================================================================================
@@ -1968,9 +2470,9 @@ box-shadow: none !important;
 =========================================================================================================================
 5.FLOATING HEADER
 =========================================================================================================================
-.skinHeader {
-  width: 99%;
-  left: 50%;
+.skinHeader,header{
+  width: 99% !important;
+  left: 50% !important;
   transform: translateX(-50%);
   margin: 7px 0px;
   border-radius: 15px;
@@ -1979,12 +2481,14 @@ box-shadow: none !important;
   border-radius: 50px;
 }
 
-body:has(.videoPlayerContainer) .skinHeader{
+body:has(.videoPlayerContainer) .skinHeader,
+body:has(.videoPlayerContainer) header
+{
 	backdrop-filter: blur(8px) !important;
 }
 
 ===========================================================================================================================
-6.ALTERNATIVE NAVIGATION BAR
+6.ALTERNATIVE NAVIGATION BAR || this plugin will be unavailable for jellyfin v12+ users due to it already being used in v12+ design
 ============================================================================================================================
 .emby-tab-button {
 	background: #f5deb30d !important; 
@@ -2026,15 +2530,21 @@ body:has(.videoPlayerContainer) .skinHeader{
 }
 }
 ===========================================================================================================================
-7.REMOVE JELLYFIN LOGO FROM THE HEADER
+7.REMOVE JELLYFIN LOGO FROM THE HEADER || limited support in jellyfin v12+ (not recommended in v12+ due to jellyfin logo being the home button)
 ============================================================================================================================
 
 .pageTitleWithDefaultLogo{
  background: none;
 }
+.MuiButtonBase-root.MuiButton-root.MuiButton-text.MuiButton-textInherit.MuiButton-sizeLarge.MuiButton-textSizeLarge.MuiButton-colorInherit.css-iqm7ky:has(.MuiButton-icon.MuiButton-startIcon.MuiButton-iconSizeLarge.css-1oowakh) {
+	opacity: 0;
+	width: 0px;
+	height: 45px;
+	margin: 0px;
+}
 
 ===========================================================================================================================
-8.ALTERNATIVE CARD HOVER EFFECT #1
+8.ALTERNATIVE CARD HOVER EFFECT #1 || glass effect might dissapear on cards
 ============================================================================================================================
 .cardOverlayContainer {
 	background: #fff0 !important;
@@ -2061,5 +2571,35 @@ mix-blend-mode: soft-light;}
 .sliderBubble {
 	border-radius: 18px;
 	padding: 2px;
+}
+===========================================================================================================================
+11.IOS TOGGLE STYLING
+===========================================================================================================================
+
+@keyframes toggle{
+  from,to{
+  	transform: translateX(-3px) scale(1);
+  }
+  50%{
+  background: #ffffffb2;
+  backdrop-filter: blur(3px);
+  box-shadow: 2px 3px 2px -3.2px rgb(9, 255, 36) inset, -2px -2px 1px -2px rgba(31, 255, 35, 0.84) inset, 0px 0px 15px rgba(0, 0, 0, 0.24);
+  	transform: translateX(-3px) scale(1.5);
+  }
+}
+@keyframes toggleX{
+  from,to{
+  	transform: translateX(-3px) scale(1);
+  }
+  50%{
+  background: #ffffffb2;
+  backdrop-filter: blur(3px);
+  box-shadow: 2px 3px 2px -3.2px rgb(9, 255, 36) inset, -2px -2px 1px -2px rgba(31, 255, 35, 0.84) inset, 0px 0px 15px rgba(0, 0, 0, 0.24);
+  	transform: translateX(-3px) scale(1.4);
+  }
+}
+  
+.MuiSwitch-track.css-7m1v5o,.css-1fmeo47.Mui-checked + .MuiSwitch-track, .css-7m1v5o{ 
+	background: #34c759 !important;
 }
 */
