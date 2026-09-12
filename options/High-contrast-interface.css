@@ -6,10 +6,13 @@
   
   background-color: rgba(0, 0, 0, 0.29) !important;
 }
-  .dialog {
-  background-color: #101010ab;
-  backdrop-filter: invert(1) blur(10px) !important;
+.cardOverlayButtonIcon-hover {
+  background: rgba(0,0,0,.7) !important;
 }
-  [dir="ltr"] .navMenuOption{
+  .dialog,.MuiPopover-paper{
+  background-color: #101010ab;
+  backdrop-filter: invert(1) blur(var(--smallui-frosted)) !important;
+}
+  [dir="ltr"] .navMenuOption,.MuiMenuItem-root{
   background: #f0f8ff38 !important; 
 }
