@@ -1,6 +1,6 @@
-.skinHeader {
-  width: 99%;
-  left: 50%;
+.skinHeader,header{
+  width: 99% !important;
+  left: 50% !important;
   transform: translateX(-50%);
   margin: 7px 0px;
   border-radius: 15px;
@@ -9,6 +9,8 @@
   border-radius: 50px;
 }
 
-body:has(.videoPlayerContainer) .skinHeader{
+body:has(.videoPlayerContainer) .skinHeader,
+body:has(.videoPlayerContainer) header
+{
 	backdrop-filter: blur(8px) !important;
 }
