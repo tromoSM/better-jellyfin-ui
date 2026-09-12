@@ -129,6 +129,10 @@ https://github.com/user-attachments/assets/56181924-8a25-4a21-b272-642b82cead16
 <details>
   <summary><Strong>Alternative navigation bar</Strong></summary>
 
+  > **For Jellyfin v12+ users** : this plugin won't work with jellyfin v12 or later versions  
+  > ###### this plugin wont work on jellyfin v12 or later version because it is already being used by default
+  >  
+
   ### Preview
   ![igv](https://github.com/tromoSM/better-jellyfin-ui/blob/main/options/screenshots/altrNav.png?raw=true)
 
@@ -141,6 +145,8 @@ https://github.com/user-attachments/assets/56181924-8a25-4a21-b272-642b82cead16
 </details>
 <details>
   <summary><strong>Remove jellyfin logo from header</strong></summary>
+
+> For Jellyfin v12+ users : this plugin might not work as great in v12 compared other versions
 
   ### Preview
  | before | after |
@@ -177,6 +183,21 @@ https://github.com/user-attachments/assets/56181924-8a25-4a21-b272-642b82cead16
 
   ```css
 @import url("https://cdn.jsdelivr.net/gh/tromoSM/better-jellyfin-ui@main/options/Trickplay-support.css");
+```
+  
+</details>
+
+<details>
+  <summary><Strong>iOS Toggle styling</Strong></summary>
+
+  ### Preview
+  | before | after |
+  |-|-|
+  | ![better jellyfin ui plugin #11 : ios toggle styling](https://github.com/user-attachments/assets/ba565761-c1c9-4051-9da8-c88604506845) | ![better jellyfin ui plugin #11 : ios toggle styling](https://github.com/user-attachments/assets/043af9ea-c502-4c67-83aa-e031799b00c0) |
+
+  ### Installation
+  ```css
+@import url("https://cdn.jsdelivr.net/gh/tromoSM/better-jellyfin-ui@main/options/alternative-detail-logo.css");
 ```
   
 </details>
@@ -224,12 +245,16 @@ https://github.com/user-attachments/assets/56181924-8a25-4a21-b272-642b82cead16
 
 # Compatibility
 
-• Designed for Jellyfin Web, desktop and mobile client
-• Some animations might not work as expected on desktop(not web) client.
-• TV client does not support custom css
-• Add-ons can be combined freely  
+
+• Designed for Jellyfin Web, desktop and mobile client  
+• Some animations might not work as expected on desktop(not web) client.  
+• TV client does not support custom css  
+• Add-ons can be combined freely    
+• Now works with Jellyfin v12   
 
 ---
 
-###### [send feedback or request features](https://tromosm.gt.tc/?feedback=true)
+
+
+###### [send feedback or request features](https://tromosm.gt.tc/?feedback=true&utm_source=jellyreadmenew)
 ###### © 2026 - tromoSM. Licensed under Apache 2.0.
