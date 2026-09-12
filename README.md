@@ -197,7 +197,7 @@ https://github.com/user-attachments/assets/56181924-8a25-4a21-b272-642b82cead16
 
   ### Installation
   ```css
-@import url("https://cdn.jsdelivr.net/gh/tromoSM/better-jellyfin-ui@main/options/alternative-detail-logo.css");
+@import url("https://cdn.jsdelivr.net/gh/tromoSM/better-jellyfin-ui@main/options/iOS-toggle-styling.css");
 ```
   
 </details>
