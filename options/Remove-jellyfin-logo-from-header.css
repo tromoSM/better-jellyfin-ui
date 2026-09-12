@@ -1,3 +1,10 @@
+
 .pageTitleWithDefaultLogo{
  background: none;
+}
+.MuiButtonBase-root.MuiButton-root.MuiButton-text.MuiButton-textInherit.MuiButton-sizeLarge.MuiButton-textSizeLarge.MuiButton-colorInherit.css-iqm7ky:has(.MuiButton-icon.MuiButton-startIcon.MuiButton-iconSizeLarge.css-1oowakh) {
+	opacity: 0;
+	width: 0px;
+	height: 45px;
+	margin: 0px;
 }
