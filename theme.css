@@ -5,6 +5,8 @@ tromoSM/better-jellyfin-ui
 
 version 1.18 release 19
 see changelog.md for changes
+
+all id start with "youtube-preview" yt iframe style contrainer inside -> video root iframe yt trailer shit add scale in. start with blur
 */ 
 @font-face {
   font-family: Inter;
@@ -1849,7 +1851,7 @@ border-left-color: white !important;
 	padding-bottom: 0px;
 }
 
-/*118 - support for jellyfin v12 ui*/
+/*118 - support for jellyfin v12 ui - REPORTED BY @fred8044*/
 
   /*header area*/
 header .MuiButtonBase-root.MuiButton-text {
