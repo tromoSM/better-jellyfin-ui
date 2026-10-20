@@ -1,6 +1,7 @@
 .skinHeader,header{
   width: 99% !important;
   left: 50% !important;
+  -webkit-transform: translateX(-50%);
   transform: translateX(-50%);
   margin: 7px 0px;
   border-radius: 15px;

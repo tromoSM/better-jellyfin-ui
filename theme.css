@@ -43,6 +43,7 @@ see changelog.md for changes
   position: fixed;
   top: 0;
   left: 50%;
+  -webkit-transform: translateX(-50%);
   transform: translateX(-50%);
 }
 @keyframes a{
@@ -214,6 +215,7 @@ width: 100%;
   left: 50%;
   transition: 0.2s cubic-bezier(0.075, 0.82, 0.165, 1);
   width: 0%;
+  -webkit-transform: translate(-50%,2px);
   transform: translate(-50%,2px);
   height: 2px;
   border-radius: 50px;
@@ -318,6 +320,7 @@ select:focus{background-color: #3a3a3a;}
   transition: 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   left: 50%;
   opacity: 0;
+  -webkit-transform: translateX(-50%) scale(0.7);
   transform: translateX(-50%) scale(0.7);
   background-color:#ffffff15 !important;
 }
@@ -341,6 +344,7 @@ select:focus{background-color: #3a3a3a;}
 }
 
 .paper-icon-button-light:hover::before{
+  -webkit-transform: translateX(-50%) scale(1);
   transform: translateX(-50%) scale(1);
   opacity: 0.8;
   
@@ -483,6 +487,7 @@ filter: brightness(0.9);
 .searchSuggestionsList.padded-left.padded-right {
 	width: fit-content;
 	background: #2b2b2b;
+	-webkit-transform: translateX(-50%);
 	transform: translateX(-50%);
 	left: 50%;
 	position: absolute;
@@ -748,6 +753,7 @@ transition: 0.2s;
 .videoOsdBottom {
   width: 98%;
   left: 50%;
+  -webkit-transform:translateX(-50%) translateY(0px);
   transform:translateX(-50%) translateY(0px);
   border-radius: 15px;
   background: #ffffff0a;
@@ -781,6 +787,7 @@ z-index: -1;
 }
 .videoOsdBottom-hidden {
   opacity: 0;
+  -webkit-transform: translateX(-50%) translateY(50px) !important;
   transform: translateX(-50%) translateY(50px) !important;
 }
 /*Mobile styling ahh begin*/
@@ -841,6 +848,7 @@ z-index: -1;
   position: absolute;
   left: 50%;
   top: 50%;
+  -webkit-transform: translateX(-50%) translateY(-50%);
   transform: translateX(-50%) translateY(-50%);
   background-color: var(--card-indicate-bg) !important;
 }
@@ -936,6 +944,7 @@ z-index: -1;
   transition: 0.2s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 .button-flat.button-flat-mini.sectionTitleTextButton.emby-button:hover span {
+  -webkit-transform: translateX(5px);
   transform: translateX(5px);
 }
 
@@ -1750,6 +1759,7 @@ border-left-color: white !important;
   opacity: 1;
 }
 .cardOverlayContainer .cardOverlayButton-br.flex {
+  -webkit-transform: translateY(10px);
   transform: translateY(10px);
   opacity: 0;
   transition: 0.2s transform,0.2s opacity;
@@ -2131,6 +2141,7 @@ div.MuiButtonGroup-root:not(.MuiButtonGroup-root:first-child,.cardOverlayButton-
 	right: 13px;
 }
 .MuiSwitch-thumb.css-65bv5r{
+  -webkit-transform: translateX(-2px);
   transform: translateX(-2px);
 }
 @keyframes toggle{

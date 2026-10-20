@@ -8,6 +8,7 @@
 	position: fixed !important;
 	top: 0 !important;
 	left: 50% !important;
+	-webkit-transform: translateX(-50%) translateY(11%) !important;
 	transform: translateX(-50%) translateY(11%) !important;
 	background: #f5deb30d !important;
 	border-radius: 50px !important;
@@ -30,6 +31,7 @@
 	height: fit-content !important;
 	margin-bottom: 8px !important;
 	position: relative !important;
+	-webkit-transform: translateX(-50%) !important;
 	transform: translateX(-50%) !important;
 }
 .emby-tab-button {
